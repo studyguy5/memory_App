@@ -1,0 +1,30 @@
+@use '../abstract/mixins' as mixin;
+
+.startContent{
+    @include mixin.flexCenter(none,center);
+    flex-direction: column;
+    background-color:  rgb(128, 131, 131);
+    // position:absolute;
+    // top:0px;
+    width:100%;
+    height:100vh;
+    z-index: 10;
+}
+
+.smallHeadline{
+    font-size: 48px;
+}
+
+.mainHeadline{
+    font-size: 140px;
+    margin-bottom:85px;
+}
+
+.startButton{
+    @include mixin.flexCenter();
+    cursor: pointer;
+    padding:24px;
+    width:250px;
+    height:98px;
+    background-color: rgba(240, 234, 110, 1);
+}

@@ -1,0 +1,53 @@
+
+@use '../abstract/mixins' as mixin;
+
+.gameUI{
+    position:--positionFixed;
+    @include mixin.flexCenter(flex, center, start);
+    margin:0 auto;
+    min-width:100%;
+    max-width:1440px;
+    height: 100vh;
+    background-color: rgb(28, 39, 39);
+}
+
+.headGameInfo{
+    @include mixin.flexCenter(flex, space-between);
+    margin-top:41px;
+    width:100%;
+    max-width:1217px;
+    height:62px;
+    background-color: rgb(38, 75, 75);
+}
+
+.playerInfo{
+    padding: 17px 20px;
+    box-sizing: border-box;
+    @include mixin.flexCenter(flex, start, center);
+    width:292px;
+    height:62px;
+    background-color: rgb(69, 97, 97);
+    >.player1, >.player2{
+        gap:5px;
+        @include mixin.flexCenter(flex, start, center);
+        width:100%;
+        height:100%;
+    }
+}
+
+.currentPlayer{
+    @include mixin.flexCenter(flex, center, end);
+    height:62px;
+    background-color: rgb(69, 97, 97);
+    font-size: 26px;
+}
+
+.exitGame{
+    height:62px;
+    width:207px;
+    background-color: rgb(69, 97, 97);
+    >img:hover{
+        cursor: pointer;
+        content: url('/project/assets/img/exitButtonHover.svg');
+    }
+}

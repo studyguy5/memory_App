@@ -1,0 +1,12 @@
+@use '../abstract/mixins' as mixin;
+
+$positionFixed: fixed;
+$positionAbsolute: absolute;
+
+$flex: flex;
+$center: center;
+$alignCenter: center;
+$spaceEvenly: space-evenly;
+$spaceAround: space-around;
+$spaceBetween: space-between;
+$flexColumn: column;
