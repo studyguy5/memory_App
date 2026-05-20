@@ -1,4 +1,5 @@
 
+
 export function renderSettingsPage(){
     return /*html*/`
     <div class="gameSettingsContent">
@@ -20,9 +21,9 @@ export function renderSettingsPage(){
                     </ul>
                     <p class="BoardHeadline">Board size<img src="/project/assets/icons/card_icon.svg"></p>
                     <ul class="size">
-                        <li data-amount="8">8 Cards <img src="/project/assets/icons/yellow_choosen.svg"></li>
                         <li data-amount="16">16 Cards <img src="/project/assets/icons/yellow_choosen.svg"></li>
                         <li data-amount="24">24 Cards <img src="/project/assets/icons/yellow_choosen.svg"></li>
+                        <li data-amount="36">36 Cards <img src="/project/assets/icons/yellow_choosen.svg"></li>
                     </ul>
                 </div>
                 <div class="settingRight">
@@ -33,7 +34,7 @@ export function renderSettingsPage(){
                         <p class="player">choose player</p>
                         <img src="/project/assets/icons/yellow_line.svg" alt="seperator">
                         <p class="size">card deck</p>
-                        <button disabled = "true" class="startSession">Start</button>
+                        <button  disabled = "true" class="startSession">Start</button>
                     </div>
                 </div>
             </div>

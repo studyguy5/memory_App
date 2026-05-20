@@ -1,0 +1,18 @@
+@use '../abstract/_mixins' as mixin;
+
+:root{
+    $positionFixed: fixed;
+    $positionAbsolute: absolute;
+--flex: flex;
+--center: center;
+--alignCenter: center;
+--spaceEvenly: space-evenly;
+--spaceAround: space-around;
+--spaceBetween: space-between;
+--flexColumn: column;
+
+// colors
+--codingThemeColor: rgb(48,49,49);
+--gamesThemeColor: rgb(41,79,96);
+--DaProjectThemeColor: rgba(255, 255, 255, 1);
+}

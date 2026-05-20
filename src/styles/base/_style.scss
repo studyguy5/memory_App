@@ -1,8 +1,8 @@
-@use '../abstract/mixins' as mixin;
+@use '../abstract/_mixins' as mixin;
 
 
 body{
-    @include mixin.flexCenter(center);
+    @include mixin.flexCenter(flex, center, center);
     @include mixin.margin();
     flex-direction: column;
     height:100vh;
