@@ -1,11 +1,11 @@
 import './styles/main.scss';
 import { renderSettingsPage } from './renderSettings';
-import { generateGameUI, setThemeOnRoot } from './game';
+import { generateGameUI} from './game';
 
 // document.getElementById('title')!.innerText = 'Hallo, ich benutze kein Module';
 document.addEventListener('DOMContentLoaded', () => {
-const currentPage = document.body.getAttribute('data-page') ?? 'start';
-navigateTOPage(currentPage);
+    const currentPage = document.body.getAttribute('data-page') ?? 'start';
+    navigateTOPage(currentPage);
 })
 export function navigateTOPage(currentPage: string): void {
     document.querySelector('body')!.setAttribute('data-page', currentPage);
@@ -29,12 +29,14 @@ function generateSettingsPage(): void {
     let setting = document.querySelector('.gameSettingsWrapper') as HTMLDivElement;
     setting.innerHTML = "";
     setting.innerHTML = renderSettingsPage();
-    
+    setLitenerTheme();
+    setLitenerPlayer();
+    setLitenerSize();
 }
 
 
 function init2() {
-    const fieldRef = document.getElementById('field');
+    const fieldRef = document.getElementById('card');
     if (fieldRef) {
         fieldRef.addEventListener('click', e => {
             const card = (e.target as HTMLElement).closest('.card') as HTMLButtonElement;
@@ -87,21 +89,21 @@ if (layer) {
 let vibe = false;
 let playerColor = false;
 let size = false;
-document.addEventListener('click', (e) => {
-    console.log('eventlistener Zeile 91')
-    const target = e.target as HTMLElement;
 
-    const btn = target.closest<HTMLElement>('[data-theme]');
-    if (!btn) return
-    document.querySelectorAll<HTMLElement>('.themes li[data-theme]').forEach(li => {
-        li.classList.remove('active');
-        li.querySelectorAll<HTMLImageElement>('img').forEach(img => {
-            img.style.display = 'none';
+function setLitenerTheme() {
+    const items = document.querySelectorAll<HTMLElement>('.themes [data-theme]');
+    const image = document.querySelectorAll<HTMLElement>('.themes img');
+    items.forEach((item: HTMLElement) => {
+        item.addEventListener('click', () => {
+            items.forEach((i: HTMLElement) => i.classList.remove('active'),
+                image.forEach((i: HTMLElement) => i.style.display = "none"))
+            const themeValue: string = item.getAttribute('data-theme')!;
+            chooseThemeSetting(themeValue);
         });
-    })
-    const theme = btn.getAttribute('data-theme') as string;
-    chooseThemeSetting(theme);
-});
+    });
+}
+
+
 function chooseThemeSetting(theme: string): void {
     if (theme === 'codeVibes') {
         vibe = true;
@@ -132,20 +134,18 @@ function chooseThemeSetting(theme: string): void {
     }
 }
 
-document.addEventListener('click', (e) => {
-    const target = e.target as HTMLElement;
-
-    const btn = target.closest<HTMLElement>('[data-player]');
-    if (!btn) return
-    document.querySelectorAll<HTMLImageElement>('.choose li[data-player]').forEach(li => {
-        li.classList.remove('active');
-        li.querySelectorAll<HTMLImageElement>('img').forEach(img => {
-            img.style.display = 'none';
+function setLitenerPlayer() {
+    const items = document.querySelectorAll<HTMLElement>('.choose [data-player]');
+    const image = document.querySelectorAll<HTMLElement>('.choose img');
+    items.forEach((item: HTMLElement) => {
+        item.addEventListener('click', () => {
+            items.forEach((i: HTMLElement) => i.classList.remove('active'),
+                image.forEach((i: HTMLElement) => i.style.display = "none"));
+            const playerValue: string = item.getAttribute('data-player')!;
+            choosePlayerSetting(playerValue);
         });
-    })
-    const player = btn.getAttribute('data-player') as string;
-    choosePlayerSetting(player);
-})
+    });
+}
 
 function choosePlayerSetting(player: string): void {
     if (player === 'Blue') {
@@ -168,20 +168,18 @@ function choosePlayerSetting(player: string): void {
     }
 }
 
-document.addEventListener('click', (e) => {
-    const target = e.target as HTMLElement;
-
-    const btn = target.closest<HTMLElement>('[data-amount]');
-    if (!btn) return
-    document.querySelectorAll<HTMLImageElement>('.size li[data-amount]').forEach(li => {
-        li.classList.remove('active');
-        li.querySelectorAll<HTMLImageElement>('img').forEach(img => {
-            img.style.display = 'none';
+function setLitenerSize() {
+    const items = document.querySelectorAll<HTMLElement>('.size [data-amount]');
+    const image = document.querySelectorAll<HTMLElement>('.size img');
+    items.forEach((item: HTMLElement) => {
+        item.addEventListener('click', () => {
+            items.forEach((i: HTMLElement) => i.classList.remove('active'),
+                image.forEach((i: HTMLElement) => i.style.display = "none"));
+            const sizeValue: string = item.getAttribute('data-amount')!;
+            chooseSizeSetting(sizeValue);
         });
-    })
-    const amount = btn.getAttribute('data-amount') as string;
-    chooseSizeSetting(amount);
-})
+    });
+}
 
 function chooseSizeSetting(amount: string): void {
     if (amount === '16') {
@@ -225,4 +223,3 @@ let readyToPlayIntervall = setInterval(() => {
         }
     }
 }, 100);
-    
