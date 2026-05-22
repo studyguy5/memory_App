@@ -1,15 +1,19 @@
 
 import { rightArray } from "./game";
+import {navigateTOPage} from "./main";
 let globalPlayer: string = 'blue';
 export const state = {once: false};
+export let matchWon = false;
 export function checkForMatch() {
     // Logik zum Überprüfen, ob die beiden aufgedeckten Karten übereinstimmen
     console.log('is matched length: ', document.querySelectorAll('.card.is-filtered.matched').length);
     console.log('right array length: ', rightArray.length * 2);
-    if(document.querySelectorAll('.card.is-filtered.matched').length === (document.querySelectorAll('gameField .card') as NodeListOf<HTMLButtonElement>).length) {
+    if(document.querySelectorAll('.card.is-filtered.matched').length === (document.querySelectorAll('.gameField .card') as NodeListOf<HTMLButtonElement>).length) {
+        if(!matchWon)
         setTimeout(() => {
-            console.log('gewonnen');
-            // location.reload();
+            matchWon = true;
+            alert('Gewonnen');
+            // navigateTOPage('result'); result Seit noch gestalten
         }, 500);
     }
     let player1Points = document.querySelector(`.player1 p`)!.textContent;

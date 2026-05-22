@@ -1,11 +1,12 @@
 // import { navigateTOPage } from "./main";
 import { renderGameUI } from "./renderGame";
-// import { updatePointsAndPlayer } from "./gameLogic";
+
 import { checkForMatch } from "./gameLogic";
 export function generateGameUI(): void {
     let wrapper = document.querySelector<HTMLDivElement>('.gameSettingsWrapper');
     if (wrapper) {
         wrapper.style.display = 'none';
+        wrapper.style.opacity = '0';
         console.log('wrapper geleert')
     }
     let game = document.querySelector<HTMLDivElement>('.gameUI') as HTMLDivElement;

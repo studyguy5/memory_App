@@ -1,7 +1,8 @@
 import './styles/main.scss';
 import { renderSettingsPage } from './renderSettings';
 import { generateGameUI} from './game';
-
+import { matchWon } from "./gameLogic";
+import { renderResultsUI } from "./result";
 // document.getElementById('title')!.innerText = 'Hallo, ich benutze kein Module';
 document.addEventListener('DOMContentLoaded', () => {
     const currentPage = document.body.getAttribute('data-page') ?? 'start';
@@ -16,7 +17,7 @@ export function navigateTOPage(currentPage: string): void {
                 generateSettingsPage();
             }, 1000); break;
         case 'game': generateGameUI(); break;
-        // case 'result':     renderResult();     break;
+        case 'result': renderResultsUI('Spieler 1'); break;
         // case 'difficulty': renderDifficulty(); break;
     }
 }

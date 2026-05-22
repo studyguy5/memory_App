@@ -1,0 +1,17 @@
+
+@use "../abstract/_variables";
+@use '../abstract/_mixins' as mixin;
+.resultsWrapper{
+@include mixin.flexCenter(flex, center, center);
+    flex-direction: column;
+    gap: 20px;
+    background-color: brown;
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+}
+
+.results {
+    @include mixin.flexCenter(flex, center, center);
+    flex-direction: column;
+}
