@@ -1,0 +1,26 @@
+
+:root, 
+[data-theme="codeVibes"] {
+    --mainbackgroundColor: rgb(48,49,49);
+    --headInfoBackgroundColor: transparent;
+    --playerInfoBackgroundColor: rgb(69, 97, 97);
+    --exitImgBackgroundColor: rgb(69, 97, 97);;
+    --exitImg:url(/project/assets/img/exitButtonDefault.svg);
+    
+}
+
+[data-theme="gaming"] {
+    --mainbackgroundColor: rgb(41,79,96);
+    --headInfoBackgroundColor: rgb(84,93,117);
+    --playerInfoBackgroundColor: rgb(84,93,117);
+    --exitImgBackgroundColor: transparent;
+    --exitImg:url(/project/assets/img/exitButton-gamingTheme.svg);
+}
+
+[data-theme="DA Project"] {    
+    --mainbackgroundColor: rgb(255, 255, 255);
+    --headInfoBackgroundColor: rgb(240,243,244);
+    --playerInfoBackgroundColor: rgb(240,243,244);
+    --exitImgBackgroundColor: transparent;
+    --exitImg:url(/project/assets/img/exitButton-daprojectsTheme.svg);
+}
