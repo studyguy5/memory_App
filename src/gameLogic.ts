@@ -61,15 +61,23 @@ export function checkForMatch() {
     
 
 function switchPlayer(globalPlayer: string): string {
-    
+    let themeImg: string | null = '';
+    themeImg = document.documentElement.getAttribute('data-theme');
     globalPlayer = globalPlayer.toUpperCase();
     globalPlayer = globalPlayer === 'BLUE' ? 'ORANGE' : 'BLUE';
-    if(globalPlayer === 'BLUE') {
-        let rightPlayer = document.querySelector<HTMLImageElement>('.currentPlayer img') as HTMLImageElement;
-        rightPlayer.src = `/project/assets/icons/label_blue.svg`;
+    let rightPlayer = document.querySelector<HTMLImageElement>('.currentPlayer img') as HTMLImageElement;
+    let rightPlayerImg = document.querySelector<HTMLImageElement>('.currentPlayerImg') as HTMLImageElement;
+    if(globalPlayer === 'ORANGE') {
+        rightPlayer.src = `${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_orange.svg' : '/project/assets/icons/gaming_white.svg'}`;
+        if(themeImg === 'gaming' || themeImg === 'DA Project') {
+        rightPlayerImg.style.background = "orange"
+        }
     } else {
         let rightPlayer = document.querySelector<HTMLImageElement>('.currentPlayer img') as HTMLImageElement;
-        rightPlayer.src = `/project/assets/icons/label_orange.svg`;
+        rightPlayer.src = `${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_blue.svg': '/project/assets/icons/gaming_white.svg'}`;
+        if(themeImg === 'gaming' || themeImg === 'DA Project') {
+        rightPlayerImg.style.background = "blue"
+        }
     }
     
     return globalPlayer;

@@ -7,18 +7,28 @@ export function renderGameUI() {
     <div class="headGameInfo">
         <div class="playerInfo">
             <div class=player1>
-            <img src="${themeImg === 'codeVibes' ? '/project/assets/icons/label_blue.svg' : 
-                themeImg === 'gaming' ? '/project/assets/icons/mini-chess_pawnOrange.svg' : '/project/assets/icons/mini-chess_pawnOrange.svg'}">${themeImg === 'codeVibes' ? 'Blue' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? 'DA Project' : ''}<p>0</p>
+            <img src="${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_blue.svg' : 
+                themeImg === 'gaming' ? '/project/assets/icons/gaming_blue.svg' : '/project/assets/icons/gaming_blue.svg'}">${themeImg === 'codeVibes' ? 'Blue' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}<p>0</p>
             </div>
             <div class=player2>
-            <img src="${themeImg === 'codeVibes' ? '/project/assets/icons/label_orange.svg' : 
-                themeImg === 'gaming' ? '/project/assets/icons/mini-chess_pawnBlue.svg' : '/project/assets/icons/mini-chess_pawnBlue.svg'}"><p>0</p>
+            <img src="${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_orange.svg' : 
+                themeImg === 'gaming' ? '/project/assets/icons/gaming_orange.svg' : '/project/assets/icons/gaming_orange.svg'}">${themeImg === 'codeVibes' ? 'Orange' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}<p>0</p>
             </div>
         </div>
-        <div class="currentPlayer">Current Player:<img src="${themeImg === 'codeVibes' ? '/project/assets/icons/label_orange.svg' : 
-                themeImg === 'gaming' ? '/project/assets/icons/mini-chess_pawnOrange.svg' : '/project/assets/icons/mini-chess_pawnOrange.svg'}"></div>
+        <div class="currentPlayer">Current Player:
+            <div class="currentPlayerImg">
+                <img src="">
+            </div>
+        </div>
         <div class="exitGame">
     
+        </div>
+        <div class="exitGamePopup">
+            <p>Are you sure you want to quit the game?</p>
+            <div class="buttons">
+                <button class="no">Back to game</button>
+                <button class="yes">Exit game</button>
+            </div>
         </div>
     </div>
     <div class="gameField">

@@ -1,8 +1,8 @@
 @use '../abstract/_mixins' as mixin;
 
 :root{
-    $positionFixed: fixed;
-    $positionAbsolute: absolute;
+$positionFixed: fixed;
+$positionAbsolute: absolute;
 --flex: flex;
 --center: center;
 --alignCenter: center;
@@ -10,6 +10,10 @@
 --spaceAround: space-around;
 --spaceBetween: space-between;
 --flexColumn: column;
+
+// sizes Card
+--cardWidth: 100px;
+--cardHeight: 100px;
 
 // colors
 --codingThemeColor: rgb(48,49,49);

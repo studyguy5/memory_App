@@ -4,8 +4,24 @@
     --mainbackgroundColor: rgb(48,49,49);
     --headInfoBackgroundColor: transparent;
     --playerInfoBackgroundColor: rgb(69, 97, 97);
-    --exitImgBackgroundColor: rgb(69, 97, 97);;
+    --exitImgBackgroundColor: rgb(69, 97, 97);
+    --exitHoverColor: rgb(237, 240, 62);
+    --exitButtonBorderRadius: 0px;
     --exitImg:url(/project/assets/img/exitButtonDefault.svg);
+    --cardRadius: 0px;
+    --gap: 15px;
+    --outline: none;
+    --card_face_height: 129px;
+
+    // matchedImg
+    --outlineMatchedImg: 3px solid rgb(226, 140, 42);
+    --shadowMatchedImg: 0 0 8px rgb(226, 140, 42);
+    --widthMatchedImg: 100px;
+
+    // exitButton
+    --backToGameButtonBackgroundColor: rgb(102,207,188);
+    --exitGameButtonBackgroundColor: rgb(238,252,249);
+    --borderRadius: 0px;
     
 }
 
@@ -13,8 +29,25 @@
     --mainbackgroundColor: rgb(41,79,96);
     --headInfoBackgroundColor: rgb(84,93,117);
     --playerInfoBackgroundColor: rgb(84,93,117);
+    --exitHoverColor: red;
+    --exitButtonBorderRadius: 5px;
     --exitImgBackgroundColor: transparent;
     --exitImg:url(/project/assets/img/exitButton-gamingTheme.svg);
+    --cardRadius: 15px;
+    --gap: 0px;
+    --outline:  3px solid rgb(226, 140, 42);
+    --card_face_height: 137px;
+
+    // matchedImg
+    --outlineMatchedImg: unset;
+    --shadowMatchedImg: unset;
+    --widthMatchedImg: unset;
+
+    // exitButton
+    --backToGameButtonBackgroundColor: red;
+    --exitGameButtonBackgroundColor: rgb(240,229,238);
+    --borderRadius: 10px;
+    --borderRadiusMakro: 20px;
 }
 
 [data-theme="DA Project"] {    
@@ -22,5 +55,22 @@
     --headInfoBackgroundColor: rgb(240,243,244);
     --playerInfoBackgroundColor: rgb(240,243,244);
     --exitImgBackgroundColor: transparent;
+    --exitHoverColor: rgb(30,117,148);
+    --exitButtonBorderRadius: 5px;
     --exitImg:url(/project/assets/img/exitButton-daprojectsTheme.svg);
+    --cardRadius: 15px;
+    --gap: 0px;
+    --outline: 3px solid rgb(30,117,148);
+    --card_face_height: 137px;
+
+    // matchedImg
+    --outlineMatchedImg: unset;
+    --shadowMatchedImg: unset;
+    --widthMatchedImg: unset;
+
+    // exitButton
+    --backToGameButtonBackgroundColor: rgb(191,229,242);
+    --exitGameButtonBackgroundColor: rgb(253,138,129);
+    --borderRadius: 10px;
+    --borderRadiusMakro: 20px;
 }
