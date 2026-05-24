@@ -97,9 +97,52 @@ export const cardThemes: { [key: string]: { [key: string]: string[] } } = {
         ]
     },
 
-    daProjectsTheme: {
-        card_16: [],
-        card_24: [],
-        card_36: []
+    daprojectTheme: {
+        card_16: [
+            '<img src= "/project/assets/img/water_card.svg" alt="water_card">',
+            '<img src= "/project/assets/img/tiktakto_card.svg" alt="tiktakto_card">',
+            '<img src= "/project/assets/img/soup_card.svg" alt="soup_card">',
+            '<img src= "/project/assets/img/shoppingbasket_card.svg" alt="shoppingbasket_card">',
+            '<img src= "/project/assets/img/pokemonball_card.svg" alt="pokemonball_card">',
+            '<img src= "/project/assets/img/nudelRahmen_card.svg" alt="nudelRahmen_card">',
+            '<img src= "/project/assets/img/money_card.svg" alt="money_card">',
+            '<img src= "/project/assets/img/kiChef_card.svg" alt="kiChef_card">',
+            
+        ],
+        card_24: [
+            '<img src= "/project/assets/img/water_card.svg" alt="water_card">',
+            '<img src= "/project/assets/img/money_card.svg" alt="money_card">',
+            '<img src= "/project/assets/img/kiChef_card.svg" alt="kiChef_card">',
+            '<img src= "/project/assets/img/join_card.svg" alt="join_card">',
+            '<img src= "/project/assets/img/flower_card.svg" alt="flower_card">',
+            '<img src= "/project/assets/img/emoji_card.svg" alt="emoji_card">',
+            '<img src= "/project/assets/img/tiktakto_card.svg" alt="tiktakto_card">',
+            '<img src= "/project/assets/img/soup_card.svg" alt="soup_card">',
+            '<img src= "/project/assets/img/shoppingbasket_card.svg" alt="shoppingbasket_card">',
+            '<img src= "/project/assets/img/pokemonball_card.svg" alt="pokemonball_card">',
+            '<img src= "/project/assets/img/nudelRahmen_card.svg" alt="nudelRahmen_card">',
+            '<img src= "/project/assets/img/elpolloHat_card.svg" alt="elpolloHat_card">',
+            
+        ],
+        card_36: [
+            '<img src= "/project/assets/img/water_card.svg" alt="water_card">',
+            '<img src= "/project/assets/img/tiktakto_card.svg" alt="tiktakto_card">',
+            '<img src= "/project/assets/img/elpolloHat_card.svg" alt="elpolloHat_card">',
+            '<img src= "/project/assets/img/eggs_card.svg" alt="eggs_card">',
+            '<img src= "/project/assets/img/daprojects_card.svg" alt="daprojects_card">',
+            '<img src= "/project/assets/img/money_card.svg" alt="money_card">',
+            '<img src= "/project/assets/img/kiChef_card.svg" alt="kiChef_card">',
+            '<img src= "/project/assets/img/join_card.svg" alt="join_card">',
+            '<img src= "/project/assets/img/flower_card.svg" alt="flower_card">',
+            '<img src= "/project/assets/img/community_card.svg" alt="community_card">',
+            '<img src= "/project/assets/img/chefHat_card.svg" alt="chefHat_card">',
+            '<img src= "/project/assets/img/soup_card.svg" alt="soup_card">',
+            '<img src= "/project/assets/img/shoppingbasket_card.svg" alt="shoppingbasket_card">',
+            '<img src= "/project/assets/img/pokemonball_card.svg" alt="pokemonball_card">',
+            '<img src= "/project/assets/img/nudelRahmen_card.svg" alt="nudelRahmen_card">',
+            '<img src= "/project/assets/img/emoji_card.svg" alt="emoji_card">',
+            '<img src= "/project/assets/img/chat_card.svg" alt="chat_card">',
+            '<img src= "/project/assets/img/arrow_card.svg" alt="arrow_card">',
+        ]
     }
 }

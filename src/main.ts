@@ -124,7 +124,7 @@ function chooseThemeSetting(theme: string): void {
         let bar1 = document.querySelector<HTMLDivElement>('.settingBar .theme') as HTMLDivElement;
         bar1.innerHTML = `${theme}`;
     }
-    if (theme === "DA Project") {
+    if (theme === "daproject") {
         vibe = true;
         const yellow = document.querySelector<HTMLImageElement>(`.themes li[data-theme="${theme}"] img`) as HTMLImageElement;
         yellow.style.display = "block";

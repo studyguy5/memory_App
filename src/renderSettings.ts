@@ -12,7 +12,7 @@ export function renderSettingsPage(){
                     <ul class="themes">
                         <li data-theme="codeVibes">code vibes <img src="/project/assets/icons/yellow_choosen.svg"></li>
                         <li data-theme="gaming">gaming theme<img src="/project/assets/icons/yellow_choosen.svg"></li>
-                        <li data-theme="DA Project">Da Projects theme<img src="/project/assets/icons/yellow_choosen.svg"></li>
+                        <li data-theme="daproject">Da Projects theme<img src="/project/assets/icons/yellow_choosen.svg"></li>
                     </ul>
                     <p class="chooseHeadline">choose Player<img src="/project/assets/icons/chess_icon.svg"></p>
                     <ul class="choose">

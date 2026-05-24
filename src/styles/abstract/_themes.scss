@@ -34,8 +34,8 @@
     --exitImgBackgroundColor: transparent;
     --exitImg:url(/project/assets/img/exitButton-gamingTheme.svg);
     --cardRadius: 15px;
-    --gap: 0px;
-    --outline:  3px solid rgb(226, 140, 42);
+    --gap: 3px;
+    --outline:  2px solid rgb(226, 140, 42);
     --card_face_height: 137px;
 
     // matchedImg
@@ -50,7 +50,7 @@
     --borderRadiusMakro: 20px;
 }
 
-[data-theme="DA Project"] {    
+[data-theme="daproject"] {    
     --mainbackgroundColor: rgb(255, 255, 255);
     --headInfoBackgroundColor: rgb(240,243,244);
     --playerInfoBackgroundColor: rgb(240,243,244);
