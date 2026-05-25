@@ -5,13 +5,29 @@
     --headInfoBackgroundColor: transparent;
     --playerInfoBackgroundColor: rgb(69, 97, 97);
     --exitImgBackgroundColor: rgb(69, 97, 97);
-    --exitHoverColor: rgb(237, 240, 62);
+    --exitBoxShadow: inset 0 0 2px 5px rgb(73, 202, 178);        // äußerer Glow bleibt
     --exitButtonBorderRadius: 0px;
-    --exitImg:url(/project/assets/img/exitButtonDefault.svg);
+    --exitImg:url(/project/assets/img/exitButton_default1.svg);
+    --exitButtonHover: url(/project/assets/img/exitButton_hover.svg);
     --cardRadius: 0px;
     --gap: 15px;
     --outline: none;
     --card_face_height: 129px;
+
+    --cardwidth: 120px;
+    --cardheight: 120px;
+    --card_inner_width: 108px;
+    --card_inner_height: 118px;
+    --card_inner_face_width: 95%;
+    --card_inner_face_height: 100%;
+    --card_inner_face_back_width: 100%;
+    --card_inner_face_back_height: 100%;
+    --card_inner_face_img_width: 125px;
+    --card_inner_face_img_height: 103%;
+    
+    // img itself
+    --left: -5px;
+    --top: -5px;
 
     // matchedImg
     --outlineMatchedImg: 3px solid rgb(226, 140, 42);
@@ -35,8 +51,24 @@
     --exitImg:url(/project/assets/img/exitButton-gamingTheme.svg);
     --cardRadius: 15px;
     --gap: 3px;
-    --outline:  2px solid rgb(226, 140, 42);
+    --outline:  3px solid rgb(240, 140, 27);
     --card_face_height: 137px;
+
+    // card
+    --cardwidth: 120px;
+    --cardheight: 120px;
+    --card_inner_width: 108px;
+    --card_inner_height: 118px;
+    --card_inner_face_width: 98%;
+    --card_inner_face_height: 100%;
+    --card_inner_face_back_width: 100%;
+    --card_inner_face_back_height: 100%;
+    --card_inner_face_img_width: 128px;
+    --card_inner_face_img_height: 117%;
+    
+    // img itself
+    --left: -5px;
+    --top: -5px;
 
     // matchedImg
     --outlineMatchedImg: unset;
@@ -59,9 +91,26 @@
     --exitButtonBorderRadius: 5px;
     --exitImg:url(/project/assets/img/exitButton-daprojectsTheme.svg);
     --cardRadius: 15px;
-    --gap: 0px;
+    --gap: 5px;
     --outline: 3px solid rgb(30,117,148);
     --card_face_height: 137px;
+    // card
+
+    --cardwidth: 118px;
+    --cardheight: 100px;
+    --card_inner_width: 108px;
+    --card_inner_height: 118px;
+    --card_inner_face_width: 98%;
+    --card_inner_face_height: 91px;
+    --card_inner_face_back_width: 103%;
+    --card_inner_face_back_height: 78%;
+    --card_inner_face_img_width: 110px;
+    --card_inner_face_img_height: 114%;
+
+   
+    // img itself
+    --left: 0px;
+    --top: -7px;
 
     // matchedImg
     --outlineMatchedImg: unset;

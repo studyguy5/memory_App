@@ -37,9 +37,9 @@ export function setThemeOnRoot(): void {
     globalPlayer = choosenPlayer;
     if(rightPlayer) {
         rightPlayer.src = `${themeImg === 'codeVibes' ? `/project/assets/icons/codeVibes_${choosenPlayer}.svg` : 
-                themeImg === 'gaming' ? `/project/assets/icons/gaming_white.svg` : `/project/assets/icons/da_projects_${choosenPlayer}.svg`}`;
+                themeImg === 'gaming' ? `/project/assets/icons/gaming_white.svg` : `/project/assets/icons/gaming_white.svg`}`;
     }
-    if(themeImg === 'gaming' || themeImg === 'DA Project') {
+    if(themeImg === 'gaming' || themeImg === 'daproject') {
         rightPlayerImg.style.background = choosenPlayer === 'blue' ? "blue" : "orange";
     }
     let s = size.innerHTML;

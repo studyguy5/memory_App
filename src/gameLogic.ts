@@ -69,13 +69,13 @@ function switchPlayer(globalPlayer: string): string {
     let rightPlayerImg = document.querySelector<HTMLImageElement>('.currentPlayerImg') as HTMLImageElement;
     if(globalPlayer === 'ORANGE') {
         rightPlayer.src = `${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_orange.svg' : '/project/assets/icons/gaming_white.svg'}`;
-        if(themeImg === 'gaming' || themeImg === 'DA Project') {
+        if(themeImg === 'gaming' || themeImg === 'daproject') {
         rightPlayerImg.style.background = "orange"
         }
     } else {
         let rightPlayer = document.querySelector<HTMLImageElement>('.currentPlayer img') as HTMLImageElement;
         rightPlayer.src = `${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_blue.svg': '/project/assets/icons/gaming_white.svg'}`;
-        if(themeImg === 'gaming' || themeImg === 'DA Project') {
+        if(themeImg === 'gaming' || themeImg === 'daproject') {
         rightPlayerImg.style.background = "blue"
         }
     }

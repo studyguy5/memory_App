@@ -21,7 +21,7 @@ export function renderGameUI() {
             </div>
         </div>
         <div class="exitGame">
-    
+                
         </div>
         <div class="exitGamePopup">
             <p>Are you sure you want to quit the game?</p>
