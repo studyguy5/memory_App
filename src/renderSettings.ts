@@ -34,7 +34,8 @@ export function renderSettingsPage(){
                         <p class="player">choose player</p>
                         <img src="/project/assets/icons/yellow_line.svg" alt="seperator">
                         <p class="size">card deck</p>
-                        <button  disabled = "true" class="startSession">Start</button>
+                        <button  disabled = "true" class="startSession">
+                        <img src="/project/assets/icons/play_icon.svg"><p>Start</p></button>
                     </div>
                 </div>
             </div>

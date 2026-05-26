@@ -4,11 +4,22 @@
     --mainbackgroundColor: rgb(48,49,49);
     --headInfoBackgroundColor: transparent;
     --playerInfoBackgroundColor: rgb(69, 97, 97);
+    
     --exitImgBackgroundColor: rgb(69, 97, 97);
     --exitBoxShadow: inset 0 0 2px 5px rgb(73, 202, 178);        // äußerer Glow bleibt
-    --exitButtonBorderRadius: 0px;
+    --exitButtonHoverShadow:inset 0 0 3px 2px rgb(73, 202, 178),
+     0.5px 0.5px 3px 0px rgb(139, 226, 210);
+
+    --exitHoverColor: rgb(255, 255, 255);
+    --exitButtonBackgroundColorHover:rgb(69, 97, 97);
+    --exitButtonYesBackgroundColorHover: rgb(209, 238, 231);
+    --defaultExitButtonShadow: inset 0 0 1px 3px rgb(73, 202, 178);
+    --exitButtonBorderRadius: 10px;
+    --exitGameButtonBackgroundSize: cover;
     --exitImg:url(/project/assets/img/exitButton_default1.svg);
     --exitButtonHover: url(/project/assets/img/exitButton_hover.svg);
+    --exitButtonParagraphColor: rgb(255, 255, 255);
+
     --cardRadius: 0px;
     --gap: 15px;
     --outline: none;
@@ -35,8 +46,16 @@
     --widthMatchedImg: 100px;
 
     // exitButton
-    --backToGameButtonBackgroundColor: rgb(102,207,188);
-    --exitGameButtonBackgroundColor: rgb(238,252,249);
+    --exitButtonHoverShadowNormal:inset 0 0 2px 1px rgb(105, 199, 206),
+     0px 0px 1px 0px rgb(113, 207, 199);
+    --backToGameButtonBackgroundColor: rgb(73,202,178);
+    --backToGameButtonBackgroundColorHover: rgb(148,222,208);
+    --backToGameButtonBorderColor: rgb(73, 193, 209);
+    --exitButtonPColor: rgb(255, 255, 255);
+    --exitButtonYesColor: rgb(73,202,178);
+    --exitButtonYesBorder: 3px solid rgb(73, 202, 178);
+    --exitButtonPColorHover: rgb(255, 255, 255);
+    --exitGameButtonBackgroundColor: rgb(209, 238, 231);
     --borderRadius: 0px;
     
 }
@@ -45,10 +64,22 @@
     --mainbackgroundColor: rgb(41,79,96);
     --headInfoBackgroundColor: rgb(84,93,117);
     --playerInfoBackgroundColor: rgb(84,93,117);
-    --exitHoverColor: red;
-    --exitButtonBorderRadius: 5px;
+    
+    --exitButtonBackgroundColorHover:rgba(243, 12, 12, 0.13);
+    --exitHoverColor: rgb(255, 255, 255);
+    --exitButtonBorderRadius: 10px;
     --exitImgBackgroundColor: transparent;
+    --exitBoxShadow: inset 0 0 3px 5px rgb(197, 42, 42);
+    --exitGameButtonBackgroundSize: contain;
     --exitImg:url(/project/assets/img/exitButton-gamingTheme.svg);
+    --exitButtonParagraphColor: rgb(255, 255, 255);
+
+    --exitButtonYesBackgroundColorHover: rgb(255, 203, 203, 0.8);
+    --exitButtonHoverShadow:inset 0 0 3px 1px rgb(202, 73, 73),
+     0.5px 0.5px 3px 1px rgb(226, 139, 139);
+    --defaultExitButtonShadow: inset 0 0 1px 3px rgb(209, 48, 8);
+    --exitButtonIcon: url(/project/assets/icons/exit_icon_red.svg);
+    
     --cardRadius: 15px;
     --gap: 3px;
     --outline:  3px solid rgb(240, 140, 27);
@@ -76,7 +107,18 @@
     --widthMatchedImg: unset;
 
     // exitButton
+    --exitButtonHoverShadowNormal:inset 0 0 0px 0px rgb(105, 199, 206),
+     0px 0px 0px 0px rgb(113, 207, 199);
+    --exitButtonShadowNormal:inset 0 0 0px 0px rgba(253, 138, 129, 1),
+     0px 0px 0px 0px rgb(226, 139, 139);
     --backToGameButtonBackgroundColor: red;
+    --backToGameButtonBackgroundColorHover: rgb(255, 255, 255);
+    --exitButtonPColor: rgb(255, 255, 255);
+    --exitButtonYesColor: rgb(221, 12, 12);
+    --exitButtonPColorHover: rgb(230, 12, 12);
+    --exitButtonYesBorder:rgb(196, 46, 46);
+    --backToGameButtonBorderColor: rgb(245, 58, 1);
+
     --exitGameButtonBackgroundColor: rgb(240,229,238);
     --borderRadius: 10px;
     --borderRadiusMakro: 20px;
@@ -85,10 +127,18 @@
 [data-theme="daproject"] {    
     --mainbackgroundColor: rgb(255, 255, 255);
     --headInfoBackgroundColor: rgb(240,243,244);
+    --exitButtonHoverShadowNormal:inset 0 0 0px 0px rgb(105, 199, 206),
+     0px 0px 0px 0px rgb(113, 207, 199);
+
+    --exitButtonBackgroundColorHover: rgb(30,117,148);
+    --defaultExitButtonShadow: inset 0 0 0px 0px rgb(241, 241, 241);
     --playerInfoBackgroundColor: rgb(240,243,244);
-    --exitImgBackgroundColor: transparent;
-    --exitHoverColor: rgb(30,117,148);
-    --exitButtonBorderRadius: 5px;
+    --exitImgBackgroundColor:rgb(156, 210, 228);
+    --exitBoxShadow: inset 0 0 0px 0px rgb(247, 247, 247);
+    --exitHoverColor: rgb(255, 255, 255);
+    --exitButtonBorderRadius: 10px;
+    --exitButtonIcon: url(/project/assets/icons/exit_icon_white.svg);
+    --exitButtonParagraphColor:rgb(30,117,148);
     --exitImg:url(/project/assets/img/exitButton-daprojectsTheme.svg);
     --cardRadius: 15px;
     --gap: 5px;
@@ -118,8 +168,19 @@
     --widthMatchedImg: unset;
 
     // exitButton
-    --backToGameButtonBackgroundColor: rgb(191,229,242);
-    --exitGameButtonBackgroundColor: rgb(253,138,129);
+    --exitButtonYesBorder: rgb(196, 61, 27);
+    --backToGameButtonBorderColor: rgb(30,117,148);
+    --exitButtonShadowNormal:inset 0 0 3px 1px rgba(253, 138, 129, 1),
+     0.5px 0.5px 3px 1px rgb(226, 139, 139);
+    --exitButtonHoverShadow:inset 0 0 0px 0px rgb(209, 58, 47),
+     0px 0px 0px 0px rgb(226, 139, 139);
+    --exitButtonPColor: rgb(30,117,148);
+    --exitButtonYesColor: rgb(243, 238, 238);
+    --exitButtonPColorHover: rgb(254, 255, 255);
+    --exitButtonYesBackgroundColorHover: rgba(253,138,129, 1);
+    --backToGameButtonBackgroundColor:rgb(131, 202, 226);
+    --exitGameButtonBackgroundColor: rgba(253,138,129, 0.8);
+    --backToGameButtonBackgroundColorHover: rgb(30,117,148);
     --borderRadius: 10px;
     --borderRadiusMakro: 20px;
 }

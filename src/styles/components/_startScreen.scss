@@ -26,5 +26,22 @@
     padding:24px;
     width:250px;
     height:98px;
+    font-size:22px;
+    font-weight: bold;
     background-color: rgba(240, 234, 110, 1);
+    &:hover{
+        >img:first-child{
+            transform: rotate(-25.77deg);
+        }
+        >img:last-child{
+            content: url('/project/assets/icons/arrow-rightBold.svg');
+            margin-right:-5px;
+        }
+    }
+}
+
+.startscreenHeadline img{
+    position:absolute;
+    top:59%;
+    left:5px;
 }

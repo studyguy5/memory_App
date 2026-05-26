@@ -78,37 +78,49 @@
 }
 
 .exitGame {
-    background-image: var(--exitImg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    // padding:5px;
-    // margin-bottom:-5px;
+    @include mixin.flexCenter(flex, center, center);
+    gap: 10px;
     height: 64px;
     width: 213px;
     padding: 0px;
-
-    // background-color: var(--exitImgBackgroundColor);
-    &:hover {
-       box-shadow: var(--exitBoxShadow);
+    box-shadow: var(--defaultExitButtonShadow);
+    border-radius: 10px;
+    background-color: var(--exitImgBackgroundColor);
+     &:hover {
+        box-shadow: var(--exitBoxShadow);
+        border-radius: var(--exitButtonBorderRadius);
         width: 213px;
         height: 64px;
+        background-color: var(--exitButtonBackgroundColorHover);
         cursor: pointer;
+        > img {
+            content: var(--exitButtonIcon);
+        }
+        > p{
+            color: var(--exitHoverColor);
+        }
     }
+    > img{
+        width: 30px;
+        height: 30px;
+    }
+    > p{
+        color: var(--exitButtonParagraphColor);
+        font-size: 24px;
+    }
+    }
+    
 
-    // >img {
-    //     width: 207px;
-    //     height: 62px;
-    // }
-}
 
 .exitGamePopup {
     @include mixin.flexCenter(flex, center, center);
     flex-direction: column;
     position: fixed;
     border-radius: var(--borderRadius);
-    top: 130px;
-    right: -600px;
+    top: -290px;
+    translate: transformY(50%);
+    transform: translateX(50%);
+    right: 50%;
     width: 539px;
     padding: 40px;
     box-sizing: border-box;
@@ -127,22 +139,47 @@
     }
 
     .buttons {
-        >.yes {
+        
+        >.no { //back to game button
             background-color: var(--backToGameButtonBackgroundColor);
-            color: black;
+            color: var(--exitButtonPColor);
             padding: 15px 20px;
+            border: 2px solid var(--backToGameButtonBackgroundColor);
             border-radius: var(--borderRadius);
             cursor: pointer;
+            &:hover {
+                color: var(--exitButtonPColorHover);
+                background-color: var(--backToGameButtonBackgroundColorHover);
+                border: 2px solid var(--backToGameButtonBorderColor);
+            }
         }
-
-        >.no {
+        >.yes { // exit game button
             background-color: var(--exitGameButtonBackgroundColor);
-            color: black;
+            color:var(--exitButtonYesColor);
             padding: 15px 20px;
+            border-color:var(--exitButtonYesBorder);
             border-radius: var(--borderRadius);
+            box-shadow: var(--exitButtonHoverShadowNormal);
             cursor: pointer;
+            &:hover{
+                background-color: var(--exitButtonYesBackgroundColorHover);
+                box-shadow: var(--exitButtonHoverShadow);
+            }
         }
     }
+}
+
+.exitPopupWrapper{
+    position: fixed;
+    display:block;
+    opacity: 0;
+    top: -100%;
+    right:0px;
+    translate: transformX(50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .card {
@@ -206,15 +243,11 @@
 }
 
 .matched .card__face {
-
     outline: var(--outline);
-
 }
 
 .machedImg {
     outline: var(--outlineMatchedImg);
     box-shadow: var(--shadowMatchedImg);
     width: var(--widthMatchedImg);
-
-
 }

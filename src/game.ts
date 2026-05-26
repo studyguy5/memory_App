@@ -138,11 +138,15 @@ console.log(arr);
 
 function activateExitWindow() {
 let exitBtn = document.querySelector('.exitGame') as HTMLDivElement;
+let wrapper = document.querySelector('.exitPopupWrapper') as HTMLDivElement;
 let exitWindow = document.querySelector('.exitGamePopup') as HTMLDivElement;
 if (exitBtn && exitWindow) {
     exitBtn.addEventListener('click', () => {
+        wrapper.style.transition = '500ms ease-in-out';
+        wrapper.style.opacity = '1';
+        wrapper.style.top = '0%';
         exitWindow.style.transition = '500ms ease-in-out';
-        exitWindow.style.right = '50px';
+        exitWindow.style.top = '330px';
         let yesBtn = document.querySelector('.exitGamePopup .yes') as HTMLButtonElement;
         let noBtn = document.querySelector('.exitGamePopup .no') as HTMLButtonElement;
         if (yesBtn) {
@@ -152,7 +156,8 @@ if (exitBtn && exitWindow) {
         }
         if (noBtn) {
             noBtn.addEventListener('click', () => {
-                exitWindow.style.right = '-100%';
+                exitWindow.style.top = '-290px';
+                wrapper.style.top = '-100%';
             })
         }
     });

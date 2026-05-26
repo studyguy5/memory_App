@@ -21,14 +21,19 @@ export function renderGameUI() {
             </div>
         </div>
         <div class="exitGame">
-                
+             <img src="${themeImg === 'codeVibes' ? '/project/assets/icons/exit_icon_white.svg' : 
+                themeImg === 'gaming' ? '/project/assets/icons/exit_icon_white.svg' : '/project/assets/icons/exit_icon_blue.svg'}" alt="Exit Game Button">
+                <p>Exit Game</p>   
         </div>
+        
+        <div class="exitPopupWrapper">
         <div class="exitGamePopup">
             <p>Are you sure you want to quit the game?</p>
             <div class="buttons">
                 <button class="no">Back to game</button>
                 <button class="yes">Exit game</button>
             </div>
+        </div>
         </div>
     </div>
     <div class="gameField">

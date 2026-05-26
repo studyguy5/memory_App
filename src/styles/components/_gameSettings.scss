@@ -36,20 +36,46 @@
     font-size: 20px;
     gap:2px;
     width:560px;
+    max-width:580px;
     height:81px;
     background-color: rgba(246, 246, 246, 1);
+    transition: 0.8s ease-in-out;
+    &:has(>button:hover){
+        transition: 0.8s ease-in-out;
+        width:590px;
+    }
     >button{
+        @include mixin.flexCenter(flex, center, center);
         width:126px;
         height:53px;
         padding: 14px 20px;
         background-color: rgba(240, 234, 110, 1);
+        transition: 0.8s ease-in-out;
+        // &:has(&:hover){
+        //     margin-right:50px;
+        // }
         &:disabled{
             opacity: 0.5;
             cursor: not-allowed;
         }
         &:hover{
             cursor: pointer;
-            transform:scale(1.05);
+            transition: 0.8s ease-in-out;
+            transform:scale(1.1);
+            margin-right:10px;
+            >img{
+                transition: 0.5s ease-in-out;
+                transform:scale(1.3);
+                transform: rotate(-25deg);
+            }
+        }
+        >img{
+            align-self: center;
+            margin-right:10px;
+        }
+        > p{
+            font-size:17px;
+            font-weight: bold;
         }        
     }
     >.theme{
@@ -117,8 +143,7 @@
     list-style-type: none;
     padding:0px;
     >ul{
-        height:99px;
-
+        min-height:99px;
     }
     >li{
         width:249px;
@@ -165,6 +190,9 @@
     font-size: 20px;
     list-style-type: none;
     padding:0px;
+    >ul{
+        min-height:99px;
+    }
     >li{
         margin-left:10px;
         margin-bottom:12px;
@@ -174,9 +202,6 @@
             content: url('/assets/icons/li_circleBlack.svg');
             margin-right: 12px;
         }
-        // &:hover::after{
-        //     content:url('/assets/icons/yellow_choosen.svg');
-        // }
         &:hover::before{
             cursor: pointer;
             content: url('/assets/icons/listPoint_filled.svg');
@@ -199,6 +224,9 @@
     font-size: 20px;
     list-style-type: none;
     padding:0px;
+    >ul{
+        min-height:99px;
+    }
     >li{
         margin-left:10px;
         margin-bottom:12px;
