@@ -1,4 +1,5 @@
-
+let themeImg: string | null = '';
+    themeImg = document.documentElement.getAttribute('data-theme');
 let wrapper = document.querySelector<HTMLDivElement>('.resultsWrapper');
 let game = document.querySelector<HTMLDivElement>('.gameUI') as HTMLDivElement;
 export function renderResultsUI(): void {
@@ -13,8 +14,17 @@ export function renderResultsUI(): void {
         <img src="/project/assets/img/game_over.svg" alt="game over.svg">
         <span>Final Score:</span>
         <div class="score">
-        <img src="/project/assets/icons/label_blue.svg"><p>Blue: ${player1Points}</p> 
-        <img src="/project/assets/icons/label_orange.svg"><p>Orange: ${player2Points}</p>
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/icons/codeVibes_blue.svg">'
+             : themeImg === 'gaming' ? '<img src="/project/assets/icons/gaming_blue.svg">' 
+                : '<img src="/project/assets/icons/gaming_blue.svg">'}
+                <p>${themeImg === 'codeVibes' ? 'Blue:' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}
+                ${player1Points}</p>
+
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/icons/codeVibes_orange.svg">' 
+            : themeImg === 'gaming' ? '<img src="/project/assets/icons/gaming_orange.svg">' 
+            : '<img src="/project/assets/icons/gaming_orange.svg">'}
+            <p>${themeImg === 'codeVibes' ? 'Orange:' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}
+            ${player2Points}</p>
         </div>
     </div>`;
     }
@@ -31,12 +41,12 @@ function showWinner(): void {
         if (wrapper) {
             wrapper.innerHTML = "";
             wrapper.innerHTML = `<div class="resultsWinner">
-        <img src="/project/assets/img/Confetti.svg" alt="confetti.svg">
+            ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/Confetti.svg" alt="confetti.svg">' : ''}
         <span>The winner is</span>
         <p class="blue">${'Blue player'}</p>
         <div class="imageButtonDiv">
-        <img src="/project/assets/img/blue_chess_pawn.svg" alt="winner_image.svg">
-        <button onclick="reloadpage()" class="playAgainBtn">Back to Start</button>
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/blue_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': '<img src="/project/assets/img/blue_PawnWhiteBorder.svg">'}
+        <button onclick="reloadpage()" class="playAgainBtn">${themeImg === 'codeVibes' ? 'Back to Start' : themeImg === 'gaming' ? 'Home' : 'Home'}</button>
         </div>
         </div>`;
             wrapper.querySelector('.playAgainBtn')?.addEventListener('click', reloadpage);
@@ -45,12 +55,12 @@ function showWinner(): void {
         if (wrapper) {
             wrapper.innerHTML = "";
             wrapper.innerHTML = `<div class="resultsWinner">
-        <img src="/project/assets/img/Confetti.svg" alt="confetti.svg">
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/Confetti.svg" alt="confetti.svg">' : ''}
         <span>The winner is</span>
         <p class="orange">${'Orange player'}</p>
         <div class="imageButtonDiv">
-        <img src="/project/assets/img/orange_chess_pawn.svg" alt="winner_image.svg">
-        <button onclick="reloadpage()" class="playAgainBtn">Back to Start</button>
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/orange_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': '<img src="/project/assets/img/orange_PawnWhiteBorder.svg">' }
+        <button onclick="reloadpage()" class="playAgainBtn">${themeImg === 'codeVibes' ? 'Back to Start' : themeImg === 'gaming' ? 'Home' : 'Home'}</button>
         </div>
         </div>`;
             wrapper.querySelector('.playAgainBtn')?.addEventListener('click', reloadpage);
@@ -58,13 +68,13 @@ function showWinner(): void {
     } else {
         if (wrapper) {
             wrapper.innerHTML = `<div class="resultsWinner">
-    <img src="/project/assets/img/Confetti.svg" alt="confetti.svg">
+    ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/Confetti.svg" alt="confetti.svg">' : ''}
     <span>It's a draw!</span>
     <div class="imageCenterDiv">
-    <img src="/project/assets/img/draw_Image.svg" alt="draw_image.svg">
-    <img src="/project/assets/img/scale_Image.svg" alt="scale_image.svg">
+    ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/draw_türkis.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/draw_red.svg">': '<img src="/project/assets/img/draw_orange.svg">'}
+    ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/scale_türkis.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/scale_red.svg">': '<img src="/project/assets/img/scale_orange.svg">'}
     </div>
-    <button onclick="reloadpage()" class="playAgainBtn">Back to Start</button>
+    <button onclick="reloadpage()" class="playAgainBtn">${themeImg === 'codeVibes' ? 'Back to Start' : themeImg === 'gaming' ? 'Home' : 'Home'}</button>
     </div>`
             wrapper.querySelector('.playAgainBtn')?.addEventListener('click', reloadpage);
         }

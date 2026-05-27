@@ -14,7 +14,7 @@
 .gameSettingsContent{
     margin:114px auto 243px auto;
     box-sizing: border-box;
-    padding:10px 167px 10px 45px;
+    padding:10px 147px 10px 45px;
     width:100%;
     max-width:1440px;
     height: calc(100vh - 114px - 243px);
@@ -29,20 +29,25 @@
 .themeImg{
     display:flex;
     justify-content: end;
+    margin-right:30px;
 }
 
 .settingBar{
     @include mixin.flexCenter(flex, space-around, center);
     font-size: 20px;
+    margin-right:30px;
     gap:2px;
     width:560px;
     max-width:580px;
     height:81px;
     background-color: rgba(246, 246, 246, 1);
     transition: 0.8s ease-in-out;
+    border: 1px solid rgb(250, 248, 248);
+    border-radius: 5px;
     &:has(>button:hover){
         transition: 0.8s ease-in-out;
-        width:590px;
+        width:570px;
+        margin-right:20px;
     }
     >button{
         @include mixin.flexCenter(flex, center, center);

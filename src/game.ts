@@ -14,6 +14,7 @@ export function generateGameUI(): void {
     let game = document.querySelector<HTMLDivElement>('.gameUI') as HTMLDivElement;
     if (game) {
         game.innerHTML = renderGameUI();
+        document.querySelector('.yes')?.addEventListener('click', reloadpage);
         activateExitWindow(); 
         setThemeOnRoot();
         setTimeout(() => {
@@ -21,6 +22,10 @@ export function generateGameUI(): void {
         }, 300);
     };
 }
+
+function reloadpage() {
+        window.location.reload();
+    }
 
 let col = 0;
 let globalPlayer: string = '';

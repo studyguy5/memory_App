@@ -7,7 +7,7 @@
     gap: 20px;
     background-color: rgb(48, 49, 49);
     width: 100%;
-    max-width: 1440px;
+    max-width: 100%;
     height: 100vh;
     display: none;
     &:has(.resultsWinner) {
@@ -41,7 +41,9 @@
     width: 100%;
     justify-content: center;
     padding: 15px 15px;
-    background-color: rgb(240, 234, 110);
+    background-color: var(--mainScoreBackgroundColor);
+    border-radius: var(--mainScoreBorderRadius);
+    border-color: var(--mainScoreBorderColor);
     font-size: 20px;
 
     >p {
@@ -53,6 +55,7 @@
 .resultsWinner {
     @include mixin.flexCenter(flex, center, center);
     flex-direction: column;
+    height:100vh;
     >img {
         margin-bottom: 200px;
     }
@@ -72,10 +75,13 @@
         font-size: 20px;
         margin-top: 30px;
         background-color: rgb(65, 86, 82);
-        border: none;
         cursor: pointer;
+        border-radius: 5px;
+        &:hover{
+            background-color:var(--drawButtonBackgroundColorHover);
+        }
     }
-
+    
     >p {
         font-size: 60px;
     }
@@ -85,12 +91,17 @@
         flex-direction: column;
         gap: 40px;
         >button {
+            color:var(--pColorButton);
             padding: 15px 30px;
             font-size: 20px;
+            border-color: var(--borderColorHomeButton);
             margin-top: 30px;
-            background-color: rgb(65, 86, 82);
-            border: none;
+            background-color: var(--backgroundColorHomeButton);
+            border-radius: var(--borderRadiusHomeButton);
             cursor: pointer;
+            &:hover{
+                background-color: var(--backgroundColorHomeButtonHover);
+            }
         }
     }
 }

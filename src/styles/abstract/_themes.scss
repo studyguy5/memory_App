@@ -1,9 +1,22 @@
 
 :root, 
 [data-theme="codeVibes"] {
+
+    --headInfoheight: 62px;
+    --headInfoPadding: 0px 0px;
     --mainbackgroundColor: rgb(48,49,49);
     --headInfoBackgroundColor: transparent;
+    
+    // playerInfo
     --playerInfoBackgroundColor: rgb(69, 97, 97);
+    --playerInfowidth: 100%;
+    --playerInfoHeight: 62px;
+    --playerInfoBorderRadius: 0px;
+    --playerInfoborderColor: rgb(221, 225, 235, 0.0);
+    // player1
+    --player1InfoNumberColor: rgb(9, 24, 231);
+    // player2
+    --player2InfoNumberColor: rgb(241, 89, 18);
     
     --exitImgBackgroundColor: rgb(69, 97, 97);
     --exitBoxShadow: inset 0 0 2px 5px rgb(73, 202, 178);        // äußerer Glow bleibt
@@ -48,22 +61,46 @@
     // exitButton
     --exitButtonHoverShadowNormal:inset 0 0 2px 1px rgb(105, 199, 206),
      0px 0px 1px 0px rgb(113, 207, 199);
-    --backToGameButtonBackgroundColor: rgb(73,202,178);
-    --backToGameButtonBackgroundColorHover: rgb(148,222,208);
-    --backToGameButtonBorderColor: rgb(73, 193, 209);
-    --exitButtonPColor: rgb(255, 255, 255);
+     --backToGameButtonBackgroundColor: rgb(73,202,178);
+     --backToGameButtonBackgroundColorHover: rgb(148,222,208);
+     --backToGameButtonBorderColor: rgb(73, 193, 209);
+     --exitButtonPColor: rgb(255, 255, 255);
     --exitButtonYesColor: rgb(73,202,178);
     --exitButtonYesBorder: 3px solid rgb(73, 202, 178);
     --exitButtonPColorHover: rgb(255, 255, 255);
     --exitGameButtonBackgroundColor: rgb(209, 238, 231);
     --borderRadius: 0px;
     
+    --borderRadiusHomeButton: 0px;
+    --backgroundColorHomeButton: rgb(65, 86, 82);
+    --backgroundColorHomeButtonHover: rgb(73, 94, 95);
+    --drawButtonBackgroundColorHover: rgb(188, 195, 196);
+    --borderColorHomeButton: rgb(65, 86, 82);
+    --pColorButton: white;
+
+    --mainScoreBackgroundColor:rgb(240, 234, 110);
+    --mainScoreborderRadius:0px;
+    --mainScoreBorderColor:rgb(240, 234, 110);
+    
+    
 }
 
 [data-theme="gaming"] {
+    --headInfoheight: 102px;
+    --headInfoPadding: 0px 20px;
     --mainbackgroundColor: rgb(41,79,96);
     --headInfoBackgroundColor: rgb(84,93,117);
-    --playerInfoBackgroundColor: rgb(84,93,117);
+
+    // playerInfo
+    --playerInfoBackgroundColor: rgb(221, 225, 235);
+    --playerInfowidth: 182px;
+    --playerInfoHeight: 54px;
+    --playerInfoBorderRadius: 10px;
+    --playerInfoborderColor: rgb(221, 225, 235);
+    // player1
+    --player1InfoNumberColor: rgb(241, 89, 18);
+    // player2
+    --player2InfoNumberColor: rgb(9, 24, 231);
     
     --exitButtonBackgroundColorHover:rgba(243, 12, 12, 0.13);
     --exitHoverColor: rgb(255, 255, 255);
@@ -122,9 +159,33 @@
     --exitGameButtonBackgroundColor: rgb(240,229,238);
     --borderRadius: 10px;
     --borderRadiusMakro: 20px;
+
+    --borderRadiusHomeButton: 10px;
+    --backgroundColorHomeButton: transparent;
+    --backgroundColorHomeButtonHover: rgba(245, 177, 177, 0.1);
+    --drawButtonBackgroundColorHover: rgb(255, 226, 226, 0.1);
+    --borderColorHomeButton: rgb(194, 16, 16);
+    --pColorButton: white;
+
+    --mainScoreBackgroundColor:rgb(245, 245, 240);
+    --mainScoreborderRadius:15px;
+    --mainScoreBorderColor:rgb(245, 245, 245);
 }
 
 [data-theme="daproject"] {    
+    --headInfoheight: 102px;
+    --headInfoPadding: 0px 20px;
+    // playerInfo
+    --playerInfoBackgroundColor: rgb(221, 225, 235);
+    --playerInfowidth: 156px;
+    --playerInfoHeight: 54px;
+    --playerInfoBorderRadius: 10px;
+    --playerInfoborderColor: rgb(221, 225, 235);
+    // player1
+    --player1InfoNumberColor: rgb(241, 89, 18);
+    // player2
+    --player2InfoNumberColor: rgb(9, 24, 231);
+    
     --mainbackgroundColor: rgb(255, 255, 255);
     --headInfoBackgroundColor: rgb(240,243,244);
     --exitButtonHoverShadowNormal:inset 0 0 0px 0px rgb(105, 199, 206),
@@ -183,4 +244,15 @@
     --backToGameButtonBackgroundColorHover: rgb(30,117,148);
     --borderRadius: 10px;
     --borderRadiusMakro: 20px;
+
+    --borderRadiusHomeButton: 10px;
+    --backgroundColorHomeButton: rgb(16, 158, 194);
+    --backgroundColorHomeButtonHover: rgb(42, 192, 230);
+    --drawButtonBackgroundColorHover: rgb(46, 222, 231);
+    --borderColorHomeButton: rgb(16, 158, 194);
+    --pColorButton: rgb(16, 19, 187);
+
+    --mainScoreBackgroundColor:rgb(245, 245, 240);
+    --mainScoreborderRadius:15px;
+    --mainScoreBorderColor:rgb(245, 245, 245);
 }
