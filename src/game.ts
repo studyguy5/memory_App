@@ -1,33 +1,41 @@
-// import { navigateTOPage } from "./main";
+
 import { renderGameUI } from "./renderGame";
 import { navigateTOPage } from "./main";
 import { checkForMatch } from "./gameLogic";
+import { cardsTemplate } from "./renderGame";
 let globalPlayer: string = '';
 export function generateGameUI(): void {
     let wrapper = document.querySelector<HTMLDivElement>('.gameSettingsWrapper');
     globalPlayer = document.querySelector<HTMLDivElement>('.player')?.innerHTML.toUpperCase() || '';
     if (wrapper) {
-        wrapper.style.display = 'none';
-        wrapper.style.opacity = '0';
-        console.log('wrapper geleert')
+        hideWrapperDiv(wrapper);
     }
     let theme = document.querySelector<HTMLDivElement>('.theme') as HTMLDivElement;
     document.documentElement.setAttribute('data-theme', `${theme.innerHTML}`);
     let game = document.querySelector<HTMLDivElement>('.gameUI') as HTMLDivElement;
     if (game) {
-        game.innerHTML = renderGameUI();
+        renderAndSetUpGameUI(game);  
+    };
+}
+
+function hideWrapperDiv(wrapper: HTMLDivElement) {
+    wrapper.style.display = 'none';
+    wrapper.style.opacity = '0';
+}
+
+function renderAndSetUpGameUI(game: HTMLDivElement) {
+    game.innerHTML = renderGameUI();
         document.querySelector('.yes')?.addEventListener('click', reloadpage);
-        activateExitWindow(); 
+        activateExitWindow();
         setThemeOnRoot();
         setTimeout(() => {
             renderCards();
         }, 300);
-    };
 }
 
 function reloadpage() {
-        window.location.reload();
-    }
+    window.location.reload();
+}
 
 let col = 0;
 
@@ -42,16 +50,21 @@ export function setThemeOnRoot(): void {
     col = Number(t);
     let rightPlayerImg = document.querySelector<HTMLImageElement>('.currentPlayerImg') as HTMLImageElement;
     let rightPlayer = document.querySelector<HTMLImageElement>('.currentPlayerImg img') as HTMLImageElement;
-    if(rightPlayer) {
-        rightPlayer.src = `${themeImg === 'codeVibes' ? `/project/assets/icons/codeVibes_${choosenPlayer}.svg` : 
-                themeImg === 'gaming' ? `/project/assets/icons/gaming_white.svg` : `/project/assets/icons/gaming_white.svg`}`;
+    setRightPlayerIconAndBackground(themeImg, choosenPlayer, rightPlayerImg, rightPlayer);
+
+
+}
+
+function setRightPlayerIconAndBackground(themeImg: string | null, choosenPlayer: string, rightPlayerImg: HTMLImageElement, rightPlayer: HTMLImageElement) {
+    if (rightPlayer) {
+        rightPlayer.src = `${themeImg === 'codeVibes' ? `/project/assets/icons/codeVibes_${choosenPlayer}.svg` :
+            themeImg === 'gaming' ? `/project/assets/icons/gaming_white.svg` : `/project/assets/icons/gaming_white.svg`}`;
     }
-    if(themeImg === 'gaming' || themeImg === 'daproject') {
+    if (themeImg === 'gaming' || themeImg === 'daproject') {
         rightPlayerImg.style.background = choosenPlayer === 'blue' ? "blue" : "orange";
     }
-    let s = size.innerHTML;
-    console.log(globalPlayer, s);
-
+    // let s = size.innerHTML;
+    // console.log(globalPlayer, s);
 }
 
 export function setGlobalPlayer(value: string) {
@@ -72,7 +85,6 @@ function getColumns(col: number): number {
         case col = 36:
             rightArray = cardThemes[theme + 'Theme'].card_36;
             return 6;
-
         default: return 4;
     }
 }
@@ -106,15 +118,7 @@ function renderCards(): void {
             const shuffled: string[] = shuffle(rightArray);
             for (let i = 0; i < shuffled.length; i++) {
                 const element = shuffled[i];
-                field.innerHTML += /*html*/ `
-                <button id="card" class="card">
-                    <div class="card__inner">
-                            <div class="card__face"><img src="${themeImg === 'codeVibes' ? '/project/assets/img/code_vibesBackside.svg' : themeImg === 'gaming'
-                                ? '/project/assets/img/gamingThemeBackside.svg' : '/project/assets/img/da_projectsBackside.svg'}" alt="backside"></div>
-                        <div class="card__face card__face--back">${element}</div>
-                    </div>
-                 </button>
-                `;
+                field.innerHTML += cardsTemplate(themeImg, element);
             }
         }
         document.querySelectorAll<HTMLElement>('.card').forEach((card, i) => {
@@ -126,19 +130,14 @@ function renderCards(): void {
 
 function shuffle(rightArray: string[]): string[] {
     let currentIndex = rightArray.length;
-
-    // While there remain elements to shuffle...
-    while (currentIndex != 0) {
-
+    while (currentIndex != 0) { // While there remain elements to shuffle..
         // Pick a remaining element...
         let randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
-
         // And swap it with the current element.
         [rightArray[currentIndex], rightArray[randomIndex]] = [
             rightArray[randomIndex], rightArray[currentIndex]];
     }
-
     return rightArray;
 }
 
@@ -148,29 +147,37 @@ let arr: number[] = [2, 11, 37, 42];
 console.log(arr);
 
 function activateExitWindow() {
-let exitBtn = document.querySelector('.exitGame') as HTMLDivElement;
-let wrapper = document.querySelector('.exitPopupWrapper') as HTMLDivElement;
-let exitWindow = document.querySelector('.exitGamePopup') as HTMLDivElement;
-if (exitBtn && exitWindow) {
+    let exitBtn = document.querySelector('.exitGame') as HTMLDivElement;
+    let wrapper = document.querySelector('.exitPopupWrapper') as HTMLDivElement;
+    let exitWindow = document.querySelector('.exitGamePopup') as HTMLDivElement;
+    if (exitBtn && exitWindow) {
+        letExitWindowSlideDown(exitBtn, exitWindow, wrapper);
+    }
+}
+
+function letExitWindowSlideDown(exitBtn: HTMLDivElement, exitWindow: HTMLDivElement, wrapper: HTMLDivElement) {
     exitBtn.addEventListener('click', () => {
         wrapper.style.transition = '500ms ease-in-out';
         wrapper.style.opacity = '1';
         wrapper.style.top = '0%';
         exitWindow.style.transition = '500ms ease-in-out';
         exitWindow.style.top = '330px';
-        let yesBtn = document.querySelector('.exitGamePopup .yes') as HTMLButtonElement;
-        let noBtn = document.querySelector('.exitGamePopup .no') as HTMLButtonElement;
-        if (yesBtn) {
-            yesBtn.addEventListener('click', () => {
-                navigateTOPage('start');
-            })
-        }
-        if (noBtn) {
-            noBtn.addEventListener('click', () => {
-                exitWindow.style.top = '-290px';
-                wrapper.style.top = '-100%';
-            })
-        }
+        handleClicks(exitWindow, wrapper);
     });
 }
+
+function handleClicks(exitWindow: HTMLDivElement, wrapper: HTMLDivElement) {
+    let yesBtn = document.querySelector('.exitGamePopup .yes') as HTMLButtonElement;
+    let noBtn = document.querySelector('.exitGamePopup .no') as HTMLButtonElement;
+    if (yesBtn) {
+        yesBtn.addEventListener('click', () => {
+            navigateTOPage('start');
+        })
+    }
+    if (noBtn) {
+        noBtn.addEventListener('click', () => {
+            exitWindow.style.top = '-290px';
+            wrapper.style.top = '-100%';
+        })
+    }
 }

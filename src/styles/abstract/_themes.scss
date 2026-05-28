@@ -85,10 +85,13 @@
     --pColorButton: white;
 
     --mainScoreBackgroundColor:rgb(240, 234, 110);
-    --mainScoreborderRadius:0px;
+    --mainScoreBorderRadius:0px;
     --mainScoreBorderColor:rgb(240, 234, 110);
-    
-    
+    --mainScoreWidth: 354px;
+    --mainScoreHeight: 62px;
+    --mainScoreFontSize: 24px;
+    --mainScoreFontSizeP: 32px;
+    --mainScoreMargin: 0px 5px 0px 10px;
 }
 
 [data-theme="gaming"] {
@@ -180,8 +183,13 @@
     --pColorButton: white;
 
     --mainScoreBackgroundColor:rgb(245, 245, 240);
-    --mainScoreborderRadius:15px;
+    --mainScoreBorderRadius:15px;
     --mainScoreBorderColor:rgb(245, 245, 245);
+    --mainScoreWidth: 222px;
+    --mainScoreHeight: 66px;
+    --mainScoreFontSize: 40px;
+    --mainScoreFontSizeP: 40px;
+    --mainScoreMargin: 0px 30px 0px 10px;
 }
 
 [data-theme="daproject"] {  
@@ -271,6 +279,11 @@
     --pColorButton: rgb(16, 19, 187);
 
     --mainScoreBackgroundColor:rgb(245, 245, 240);
-    --mainScoreborderRadius:15px;
+    --mainScoreBorderRadius:15px;
     --mainScoreBorderColor:rgb(245, 245, 245);
+    --mainScoreWidth: 220px;
+    --mainScoreHeight: 76px;
+    --mainScoreFontSize: 38px;
+    --mainScoreFontSizeP: 38px;
+    --mainScoreMargin: 0px 30px 0px 10px;
 }

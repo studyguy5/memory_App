@@ -43,4 +43,16 @@ export function renderGameUI() {
         
         
     }
+
+   export function cardsTemplate(themeImg: string | null, element: string) {
+        return /*html*/ `
+                <button id="card" class="card">
+                    <div class="card__inner">
+                            <div class="card__face"><img src="${themeImg === 'codeVibes' ? '/project/assets/img/code_vibesBackside.svg' : themeImg === 'gaming'
+                        ? '/project/assets/img/gamingThemeBackside.svg' : '/project/assets/img/da_projectsBackside.svg'}" alt="backside"></div>
+                        <div class="card__face card__face--back">${element}</div>
+                    </div>
+                 </button>
+                `;
+    }
     

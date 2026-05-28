@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 export function navigateTOPage(currentPage: string): void {
     document.querySelector('body')!.setAttribute('data-page', currentPage);
     switch (currentPage) {
-
         case 'start':
             setTimeout(() => {
                 generateSettingsPage();
@@ -107,32 +106,44 @@ function setLitenerTheme() {
 
 function chooseThemeSetting(theme: string): void {
     if (theme === 'codeVibes') {
-        vibe = true;
+        chooseCodeVibes(theme);
+    }
+    if (theme === "gaming") {
+        chooseGaming(theme);
+    }
+    if (theme === "daproject") {
+        chooseDaproject(theme);
+    }
+}
+
+function chooseCodeVibes(theme:string): void {
+    vibe = true;
         const yellow = document.querySelector<HTMLImageElement>(`.themes li[data-theme="${theme}"] img`) as HTMLImageElement;
         yellow.style.display = "block";
         const yellowB = document.querySelector<HTMLImageElement>(`.themes li[data-theme="${theme}"]`) as HTMLImageElement;
         yellowB.classList.add('active');
         let bar = document.querySelector<HTMLDivElement>('.settingBar .theme') as HTMLDivElement;
         bar.innerHTML = `${theme}`;
-    }
-    if (theme === "gaming") {
-        vibe = true;
+}
+
+function chooseGaming(theme:string): void {
+    vibe = true;
         const yellow = document.querySelector<HTMLImageElement>(`.themes li[data-theme="${theme}"] img`) as HTMLImageElement;
         yellow.style.display = "block";
         const yellowB = document.querySelector<HTMLImageElement>(`.themes li[data-theme="${theme}"]`) as HTMLImageElement;
         yellowB.classList.add('active');
         let bar1 = document.querySelector<HTMLDivElement>('.settingBar .theme') as HTMLDivElement;
         bar1.innerHTML = `${theme}`;
-    }
-    if (theme === "daproject") {
-        vibe = true;
+}
+
+function chooseDaproject(theme:string): void {
+    vibe = true;
         const yellow = document.querySelector<HTMLImageElement>(`.themes li[data-theme="${theme}"] img`) as HTMLImageElement;
         yellow.style.display = "block";
         const yellowB = document.querySelector<HTMLImageElement>(`.themes li[data-theme="${theme}"]`) as HTMLImageElement;
         yellowB.classList.add('active');
         let bar2 = document.querySelector<HTMLDivElement>('.settingBar .theme') as HTMLDivElement;
         bar2.innerHTML = `${theme}`;
-    }
 }
 
 function setLitenerPlayer() {
@@ -150,23 +161,31 @@ function setLitenerPlayer() {
 
 function choosePlayerSetting(player: string): void {
     if (player === 'Blue') {
-        playerColor = true;
-        const yellow = document.querySelector<HTMLImageElement>(`.choose li[data-player="${player}"] img`) as HTMLImageElement;
-        yellow.style.display = "block";
-        const yellowB = document.querySelector<HTMLImageElement>(`.choose li[data-player="${player}"]`) as HTMLImageElement;
-        yellowB.classList.add('active');
-        let bar = document.querySelector<HTMLDivElement>('.settingBar .player') as HTMLDivElement;
-        bar.innerHTML = `${player}`;
+        chooseBlue(player);
     }
     if (player === "Orange") {
-        playerColor = true;
+        chooseOrange(player);
+    }
+}
+
+function chooseBlue(player:string): void {
+    playerColor = true;
         const yellow = document.querySelector<HTMLImageElement>(`.choose li[data-player="${player}"] img`) as HTMLImageElement;
         yellow.style.display = "block";
         const yellowB = document.querySelector<HTMLImageElement>(`.choose li[data-player="${player}"]`) as HTMLImageElement;
         yellowB.classList.add('active');
         let bar = document.querySelector<HTMLDivElement>('.settingBar .player') as HTMLDivElement;
         bar.innerHTML = `${player}`;
-    }
+}
+
+function chooseOrange(player:string): void {
+    playerColor = true;
+        const yellow = document.querySelector<HTMLImageElement>(`.choose li[data-player="${player}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector<HTMLImageElement>(`.choose li[data-player="${player}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar = document.querySelector<HTMLDivElement>('.settingBar .player') as HTMLDivElement;
+        bar.innerHTML = `${player}`;
 }
 
 function setLitenerSize() {
@@ -184,32 +203,44 @@ function setLitenerSize() {
 
 function chooseSizeSetting(amount: string): void {
     if (amount === '16') {
-        size = true;
-        const yellow = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"] img`) as HTMLImageElement;
-        yellow.style.display = "block";
-        const yellowB = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"]`) as HTMLImageElement;
-        yellowB.classList.add('active');
-        let bar = document.querySelector<HTMLDivElement>('.settingBar .size') as HTMLDivElement;
-        bar.innerHTML = `${amount}`;
+        choose16(amount);
     }
     if (amount === "24") {
-        size = true;
-        const yellow = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"] img`) as HTMLImageElement;
-        yellow.style.display = "block";
-        const yellowB = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"]`) as HTMLImageElement;
-        yellowB.classList.add('active');
-        let bar = document.querySelector<HTMLDivElement>('.settingBar .size') as HTMLDivElement;
-        bar.innerHTML = `${amount}`;
+        choose24(amount);
     }
     if (amount === "36") {
-        size = true;
+        choose36(amount);
+    }
+}
+
+function choose16(amount:string): void {
+    size = true;
         const yellow = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"] img`) as HTMLImageElement;
         yellow.style.display = "block";
         const yellowB = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"]`) as HTMLImageElement;
         yellowB.classList.add('active');
         let bar = document.querySelector<HTMLDivElement>('.settingBar .size') as HTMLDivElement;
         bar.innerHTML = `${amount}`;
-    }
+}
+
+function choose24(amount:string): void {
+    size = true;
+        const yellow = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar = document.querySelector<HTMLDivElement>('.settingBar .size') as HTMLDivElement;
+        bar.innerHTML = `${amount}`;
+}
+
+function choose36(amount:string): void {
+    size = true;
+        const yellow = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar = document.querySelector<HTMLDivElement>('.settingBar .size') as HTMLDivElement;
+        bar.innerHTML = `${amount}`;
 }
 
 let readyToPlayIntervall = setInterval(() => {

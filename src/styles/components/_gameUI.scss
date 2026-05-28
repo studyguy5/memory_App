@@ -204,6 +204,8 @@
     opacity: 0;
     backface-visibility: hidden;
     animation: show 0.5s ease-in-out forwards 0.5s;
+    background-color: transparent;
+    border: none;
 
     &__inner {
         position: relative;
@@ -231,14 +233,15 @@
         }
 
         &--back {
-
-
+            transform: rotateY(180deg);
             width: var(--card_inner_face_back_width);
             height: var(--card_inner_face_back_height);
-            transform: rotateY(180deg);
 
             background-color: transparent;
         }
+    }
+    &.is-filtered .card__inner {
+        transform: rotateY(180deg);
     }
 }
 

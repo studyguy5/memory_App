@@ -57,9 +57,7 @@
         padding: 14px 20px;
         background-color: rgba(240, 234, 110, 1);
         transition: 0.8s ease-in-out;
-        // &:has(&:hover){
-        //     margin-right:50px;
-        // }
+        
         &:disabled{
             opacity: 0.5;
             cursor: not-allowed;
