@@ -13,6 +13,7 @@
     min-width: 100%;
     max-width: 1440px;
     height: 100vh;
+    font-family: var(--font-family);
     background-color: var(--mainbackgroundColor);
 }
 
@@ -70,9 +71,9 @@
     @include mixin.flexCenter(flex, center, center);
     height: 62px;
     background-color: var(--headInfoBackgroundColor);
-    font-size: 26px;
+    font-size: var(--currentPlayerFontSize);
     gap: 10px;
-
+    color:var(--currentPlayerColor);
     >img {
         // border-radius: 15px;
         margin: 0px 0px 5px 5px;

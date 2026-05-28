@@ -1,11 +1,11 @@
 
 import { rightArray } from "./game";
 import {navigateTOPage} from "./main";
-let globalPlayer: string = 'blue';
 export const state = {once: false};
 export let matchWon = false;
 export let player1Points = "0";
 export let player2Points = "0";
+import { globalPlayer, setGlobalPlayer } from "./game";
 export function checkForMatch() {
     // Logik zum Überprüfen, ob die beiden aufgedeckten Karten übereinstimmen
     // console.log('is matched length: ', document.querySelectorAll('.card.is-filtered.matched').length);
@@ -18,7 +18,7 @@ export function checkForMatch() {
     player1Points = document.querySelector(`.player1 p`)!.textContent;
     player2Points = document.querySelector(`.player2 p`)!.textContent;
     const currentPlayerElement = document.querySelector<HTMLElement>('.currentPlayer img')?.innerHTML.toLocaleLowerCase();
-    globalPlayer = currentPlayerElement ? currentPlayerElement : globalPlayer;
+    
    
 
         const open = document.querySelectorAll('.card.is-filtered:not(.matched)') as NodeListOf<HTMLButtonElement>;
@@ -35,7 +35,7 @@ export function checkForMatch() {
                     }
                 });
                 
-                   globalPlayer =  updatePointsAndPlayer(globalPlayer, player1Points ? Number(player1Points) : 0, player2Points ? Number(player2Points) : 0);
+                   setGlobalPlayer(updatePointsAndPlayer(globalPlayer, player1Points ? Number(player1Points) : 0, player2Points ? Number(player2Points) : 0));
             } else {
                 // Karten sind unterschiedlich
                 setTimeout(() => {
@@ -43,13 +43,12 @@ export function checkForMatch() {
                         pair.classList.remove('is-filtered');
                     });
                 }, 500);
-                if(!state.once) {
-                    state.once = true;
-                    globalPlayer = switchPlayer(globalPlayer);
+                
+                    setGlobalPlayer(switchPlayer(globalPlayer));
                 }
             }
         }
-    }
+    
 
  export  function checkIfGameIsComplete(){
         if(!matchWon)
@@ -84,7 +83,15 @@ function switchPlayer(globalPlayer: string): string {
 }
 export function updatePointsAndPlayer(globalPlayer: string, player1Points: number, player2Points: number): string{
     globalPlayer = globalPlayer.toUpperCase();
+    let themeImg: string | null = '';
+    themeImg = document.documentElement.getAttribute('data-theme');
+    if(themeImg === 'gaming' || themeImg === 'daproject') {
+    document.querySelector(`.player2 p`)!.textContent = globalPlayer == 'BLUE' ? (player2Points + 1).toString() : document.querySelector(`.player2 p`)!.textContent;
+    document.querySelector(`.player1 p`)!.textContent = globalPlayer == 'ORANGE' ? (player1Points + 1).toString() : document.querySelector(`.player1 p`)!.textContent;
+    return globalPlayer;
+    }else{
     document.querySelector(`.player1 p`)!.textContent = globalPlayer == 'BLUE' ? (player1Points + 1).toString() : document.querySelector(`.player1 p`)!.textContent;
     document.querySelector(`.player2 p`)!.textContent = globalPlayer == 'ORANGE' ? (player2Points + 1).toString() : document.querySelector(`.player2 p`)!.textContent;
     return globalPlayer;
+    }
 }

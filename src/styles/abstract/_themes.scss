@@ -2,6 +2,9 @@
 :root, 
 [data-theme="codeVibes"] {
 
+    // font-family
+    --fontFamily: 'Red Rose', sans-serif;
+
     --headInfoheight: 62px;
     --headInfoPadding: 0px 0px;
     --mainbackgroundColor: rgb(48,49,49);
@@ -9,14 +12,17 @@
     
     // playerInfo
     --playerInfoBackgroundColor: rgb(69, 97, 97);
-    --playerInfowidth: 100%;
+    --playerInfowidth: 292px;
     --playerInfoHeight: 62px;
     --playerInfoBorderRadius: 0px;
     --playerInfoborderColor: rgb(221, 225, 235, 0.0);
     // player1
-    --player1InfoNumberColor: rgb(9, 24, 231);
+    --player1InfoNumberColor:rgb(9,127,197);
     // player2
     --player2InfoNumberColor: rgb(241, 89, 18);
+    // current player
+    --currentPlayerFontSize: 26px;
+    --currentPlayerColor: white;
     
     --exitImgBackgroundColor: rgb(69, 97, 97);
     --exitBoxShadow: inset 0 0 2px 5px rgb(73, 202, 178);        // äußerer Glow bleibt
@@ -86,6 +92,9 @@
 }
 
 [data-theme="gaming"] {
+    // font-family
+    --font-family: 'Orbitron', sans-serif;
+
     --headInfoheight: 102px;
     --headInfoPadding: 0px 20px;
     --mainbackgroundColor: rgb(41,79,96);
@@ -100,8 +109,11 @@
     // player1
     --player1InfoNumberColor: rgb(241, 89, 18);
     // player2
-    --player2InfoNumberColor: rgb(9, 24, 231);
-    
+    --player2InfoNumberColor: rgb(9,127,197);
+    // currentPlayer
+    --currentPlayerFontSize: 32px;
+    --currentPlayerColor: white;
+
     --exitButtonBackgroundColorHover:rgba(243, 12, 12, 0.13);
     --exitHoverColor: rgb(255, 255, 255);
     --exitButtonBorderRadius: 10px;
@@ -172,11 +184,14 @@
     --mainScoreBorderColor:rgb(245, 245, 245);
 }
 
-[data-theme="daproject"] {    
+[data-theme="daproject"] {  
+    // font-family
+    --font-family: 'Figtree', sans-serif;
+    
     --headInfoheight: 102px;
     --headInfoPadding: 0px 20px;
     // playerInfo
-    --playerInfoBackgroundColor: rgb(221, 225, 235);
+    --playerInfoBackgroundColor: rgb(255, 255, 255);
     --playerInfowidth: 156px;
     --playerInfoHeight: 54px;
     --playerInfoBorderRadius: 10px;
@@ -184,10 +199,13 @@
     // player1
     --player1InfoNumberColor: rgb(241, 89, 18);
     // player2
-    --player2InfoNumberColor: rgb(9, 24, 231);
+    --player2InfoNumberColor: rgb(9,127,197);
+    // current player
+    --currentPlayerFontSize: 32px;
+    --currentPlayerColor: blue;
     
     --mainbackgroundColor: rgb(255, 255, 255);
-    --headInfoBackgroundColor: rgb(240,243,244);
+    --headInfoBackgroundColor: rgb(199, 219, 224);
     --exitButtonHoverShadowNormal:inset 0 0 0px 0px rgb(105, 199, 206),
      0px 0px 0px 0px rgb(113, 207, 199);
 

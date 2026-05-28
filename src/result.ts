@@ -8,32 +8,34 @@ export function renderResultsUI(): void {
     }
     if (wrapper) {
         wrapper.style.display = 'flex';
+        themeImg = document.documentElement.getAttribute('data-theme');
         let player1Points = document.querySelector(`.player1 p`)!.textContent;
         let player2Points = document.querySelector(`.player2 p`)!.textContent;
         wrapper.innerHTML = `<div class="results">
-        <img src="/project/assets/img/game_over.svg" alt="game over.svg">
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/game_over.svg" alt="game over.svg">' : themeImg === 'gaming' ? '<img src="/project/assets/img/gameOver_red.svg" alt="game over.svg">' : themeImg === 'daproject' ? '<img src="/project/assets/img/gameOver_orange.svg" alt="game over.svg">' : ""}
         <span>Final Score:</span>
         <div class="score">
         ${themeImg === 'codeVibes' ? '<img src="/project/assets/icons/codeVibes_blue.svg">'
-             : themeImg === 'gaming' ? '<img src="/project/assets/icons/gaming_blue.svg">' 
-                : '<img src="/project/assets/icons/gaming_blue.svg">'}
+             : themeImg === 'gaming' ? '<img src="/project/assets/icons/gaming_orange.svg">' 
+                : themeImg === 'daproject' ? '<img src="/project/assets/icons/gaming_orange.svg">' : ""}
                 <p>${themeImg === 'codeVibes' ? 'Blue:' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}
-                ${player1Points}</p>
+                ${themeImg === 'codeVibes' ?  player1Points : player2Points}</p>
 
         ${themeImg === 'codeVibes' ? '<img src="/project/assets/icons/codeVibes_orange.svg">' 
-            : themeImg === 'gaming' ? '<img src="/project/assets/icons/gaming_orange.svg">' 
-            : '<img src="/project/assets/icons/gaming_orange.svg">'}
+            : themeImg === 'gaming' ? '<img src="/project/assets/icons/gaming_blue.svg">' 
+            : themeImg === 'daproject' ? '<img src="/project/assets/icons/gaming_blue.svg">' : ""}
             <p>${themeImg === 'codeVibes' ? 'Orange:' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}
-            ${player2Points}</p>
+            ${themeImg === 'codeVibes' ?  player2Points : player1Points}</p>
         </div>
     </div>`;
     }
     setTimeout(() => {
         showWinner();
-    }, 2500);
+    }, 20500);
 }
 
 function showWinner(): void {
+    themeImg = document.documentElement.getAttribute('data-theme');
     let player1Points = document.querySelector(`.player1 p`)!.textContent;
     let player2Points = document.querySelector(`.player2 p`)!.textContent;
     console.log('player1Points: ', player1Points, 'player2Points: ', player2Points);
@@ -45,7 +47,7 @@ function showWinner(): void {
         <span>The winner is</span>
         <p class="blue">${'Blue player'}</p>
         <div class="imageButtonDiv">
-        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/blue_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': '<img src="/project/assets/img/blue_PawnWhiteBorder.svg">'}
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/blue_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': themeImg === 'daproject' ? '<img src="/project/assets/img/orange_PawnWhiteBorder.svg">' : ""}
         <button onclick="reloadpage()" class="playAgainBtn">${themeImg === 'codeVibes' ? 'Back to Start' : themeImg === 'gaming' ? 'Home' : 'Home'}</button>
         </div>
         </div>`;
@@ -59,7 +61,7 @@ function showWinner(): void {
         <span>The winner is</span>
         <p class="orange">${'Orange player'}</p>
         <div class="imageButtonDiv">
-        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/orange_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': '<img src="/project/assets/img/orange_PawnWhiteBorder.svg">' }
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/orange_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': themeImg === 'daproject' ? '<img src="/project/assets/img/orange_PawnWhiteBorder.svg">' : "" }
         <button onclick="reloadpage()" class="playAgainBtn">${themeImg === 'codeVibes' ? 'Back to Start' : themeImg === 'gaming' ? 'Home' : 'Home'}</button>
         </div>
         </div>`;

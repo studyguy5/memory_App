@@ -2,8 +2,10 @@
 import { renderGameUI } from "./renderGame";
 import { navigateTOPage } from "./main";
 import { checkForMatch } from "./gameLogic";
+let globalPlayer: string = '';
 export function generateGameUI(): void {
     let wrapper = document.querySelector<HTMLDivElement>('.gameSettingsWrapper');
+    globalPlayer = document.querySelector<HTMLDivElement>('.player')?.innerHTML.toUpperCase() || '';
     if (wrapper) {
         wrapper.style.display = 'none';
         wrapper.style.opacity = '0';
@@ -28,18 +30,18 @@ function reloadpage() {
     }
 
 let col = 0;
-let globalPlayer: string = '';
+
 
 export function setThemeOnRoot(): void {
     let themeImg: string | null = '';
     themeImg = document.documentElement.getAttribute('data-theme');
     let choosenPlayer = document.querySelector<HTMLDivElement>('.player')?.innerHTML.toLocaleLowerCase() || '';
+    globalPlayer = choosenPlayer;
     let size = document.querySelector<HTMLDivElement>('.size .active') as HTMLDivElement;
     let t = size.getAttribute('data-amount');
     col = Number(t);
     let rightPlayerImg = document.querySelector<HTMLImageElement>('.currentPlayerImg') as HTMLImageElement;
     let rightPlayer = document.querySelector<HTMLImageElement>('.currentPlayerImg img') as HTMLImageElement;
-    globalPlayer = choosenPlayer;
     if(rightPlayer) {
         rightPlayer.src = `${themeImg === 'codeVibes' ? `/project/assets/icons/codeVibes_${choosenPlayer}.svg` : 
                 themeImg === 'gaming' ? `/project/assets/icons/gaming_white.svg` : `/project/assets/icons/gaming_white.svg`}`;
@@ -52,6 +54,10 @@ export function setThemeOnRoot(): void {
 
 }
 
+export function setGlobalPlayer(value: string) {
+    globalPlayer = value;
+}
+export { globalPlayer };
 export let rightArray: string[] = [];
 
 function getColumns(col: number): number {

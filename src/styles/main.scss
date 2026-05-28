@@ -7,4 +7,20 @@
 @use '../styles/components/_results';
 @use '../styles/abstract/themes';
 
+font-face {
+    font-family: "Red Rose";
+    src: url("../fonts/Red_Rose/RedRose-Regular.ttf");
+}
+font-face {
+    font-family: "Orbitron";
+    src: url("../fonts/Orbitron/Orbitron-Regular.ttf");
+}
+font-face {
+    font-family: "Figtree";
+    src: url("../fonts/Figtree/Figtree-Regular.ttf");
+}
+font-face {
+    font-family: 'Almaria';
+    src: url("../fonts/Almaria/Almaria-Regular.ttf");
+}
 
