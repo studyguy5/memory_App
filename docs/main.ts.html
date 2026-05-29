@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> main.ts</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#activateExitWindowthisfunctionletstheexitwindowslidedownifweclickonexit">activateExitWindow this function lets the exit window slide down if we click on exit</a></li><li><a href="global.html#addEventListener-functiontoaddaneventlistenertothebodyelementandgetthecurrentpagethisdataattributisusedtonavigatetothecorrectpage">addEventListener - function to add an event listener to the body element and get the current pagethis data attribut is used to navigate to the correct page</a></li><li><a href="global.html#addEventListener-functiontoaddaneventlistenertothestartbuttonifpressed,itslidesthestartcontentoutofthescreen">addEventListener - function to add an event listener to the start buttonif pressed, it slides the start content out of the screen</a></li><li><a href="global.html#button2">button2</a></li><li><a href="global.html#cardsTemplatewereturnthehtmlcodeforasinglecard">cardsTemplate we return the html code for a single card</a></li><li><a href="global.html#checkForMatch-functiontocheckifthereisamatchontwoopencardsiftwoareopen,itchecksforamatchandclosesifdifferent">checkForMatch - function to check if there is a match on two open cardsif two are open, it checks for a match and closes if different</a></li><li><a href="global.html#choose36-thisfunctionsetsthecssforthe36carddeck">choose36 - this function sets the css for the 36 card deck</a></li><li><a href="global.html#chooseDaproject-functiondoesshowsomeadditionalcssonthisspecificlielement">chooseDaproject - function does show some additional css on this specific li element</a></li><li><a href="global.html#chooseOrangethisfunctionsetsthecssfortheplayerorange">chooseOrange this function sets the css for the player orange</a></li><li><a href="global.html#choosePlayerSetting-functiondecideswhichplayercolorischoosen">choosePlayerSetting - function decides which player color is choosen</a></li><li><a href="global.html#chooseSizeSetting-functiondecideswhichcarddeckischoosen">chooseSizeSetting - function decides which carddeck is choosen</a></li><li><a href="global.html#chooseThemeSetting-functiondoesshowsomeadditionalcssoneachthemeelement">chooseThemeSetting - function does show some additional css on each theme element</a></li><li><a href="global.html#closeTwoDiffrentCardsthisfunctionclosestwodifferentcards">closeTwoDiffrentCards this function closes two different cards</a></li><li><a href="global.html#getColumnsthisfunctionreturnstherightamountofcolumnsforthegame0">getColumns this function returns the right amount of columns for the game0</a></li><li><a href="global.html#handleClicksthisfunctionaddsaneventlistenertothebuttonsintheexitwindowandtriggersthebacktogameorexitfunctionifweclick">handleClicks this function adds an event listener to the buttons in the exit windowand triggers the back to game or exit function if we click</a></li><li><a href="global.html#handleTwoCardsthisfunctionhighlightamatchoncardsorclosestwodifferentcards">handleTwoCards this function highlight a match on cards or closes two different cards</a></li><li><a href="global.html#hideWrapperDivthisfunctionhidesthewrappersettingdivinordertomakeplaceforthegameUserInterface">hideWrapperDiv this function hides the wrapper setting div in order to make place for the game User Interface</a></li><li><a href="global.html#itsADrawTemplatewereturnthehtmlcodeforthecasewhereitsadraw">itsADrawTemplate we return the html code for the case where its a draw</a></li><li><a href="global.html#layer">layer</a></li><li><a href="global.html#letExitWindowSlideDownthisfunctionletstheexitwindowslidedownandchangesthecss">letExitWindowSlideDown this function lets the exit window slide down and changes the css</a></li><li><a href="global.html#playerOneWinsTemplatewereturnthehtmlcodeforthecasewhereplayeronewins">playerOneWinsTemplate we return the html code for the case where player one wins</a></li><li><a href="global.html#playerTwoWinsTemplatewereturnthehtmlcodeforthecasewhereplayertwowins">playerTwoWinsTemplate we return the html code for the case where player two wins</a></li><li><a href="global.html#readyToPlayIntervall-functiontocheckiftheUserisreadytoplayandhaschoosenalloptionsonlyiftruethestartbuttonwillbeenabled">readyToPlayIntervall - function to check if the User is ready to play and has choosen all optionsonly if true the start button will be enabled</a></li><li><a href="global.html#reloadpagethisfunctionreloadsthepage">reloadpage this function reloads the page</a></li><li><a href="global.html#renderAndSetUpGameUIthisfunctionrendersthegameUserInterfaceandsetsuptheeventlistenersforthecardsexitoption">renderAndSetUpGameUI this function renders the game User Interface and sets up the event listenersfor the cards exit option</a></li><li><a href="global.html#renderCardsthisfunctionrendersthecardsinthegamefieldcheckswhicharrayithastorender,shufflesitandrendersit">renderCards this function renders the cards in the game fieldchecks which array it has to render, shuffles it and renders it</a></li><li><a href="global.html#renderGameUI-functiontorenderthebasicgameUserInterface">renderGameUI - function to render the basic game User Interface</a></li><li><a href="global.html#renderResultsTemplatewereturnthehtmlcodefortheresults">renderResultsTemplate we return the html code for the results</a></li><li><a href="global.html#renderSettingsPage">renderSettingsPage</a></li><li><a href="global.html#rnderResultsUI-functiontorendertheresultsintotheDOM">rnderResultsUI - function to render the results  into the DOM</a></li><li><a href="global.html#setGlobalPlayerthisfunctionallowsustochangethevariableglobalPlayerinadifferentfilewhileexportingit">setGlobalPlayer this function allows us to change the variable globalPlayer in a different file while exporting it</a></li><li><a href="global.html#setGlobalPlayerthisfunctionsetstheglobalplayerasvalueorparameterinordertouseandchangeitinanotherfile">setGlobalPlayer this function sets the global player as value or parameter in order to use and change it in another file</a></li><li><a href="global.html#setImageForBluePlayerthisfunctionsetstheimagefortheblueplayer">setImageForBluePlayer this function sets the image for the blue player</a></li><li><a href="global.html#setListenerPlayerthisfunctionsetstheeventlistenerforthecardsandopensacardafterclickbyaddingtheis-filteredclass">setListenerPlayer this function sets the event listener for the cards and opens a card after clickby adding the is-filtered class</a></li><li><a href="global.html#setLitenerPlayer-functiontoaddaneventlistenertotheplayerbuttonssotheUserisabletochooseaplayercolor">setLitenerPlayer - function to add an event listener to the player buttonsso the User is able to choose a player color</a></li><li><a href="global.html#setLitenerSize-functiontoaddaneventlistenertothesizebuttons">setLitenerSize - function to add an event listener to the size buttons</a></li><li><a href="global.html#setLitenerSize-functiontoaddaneventlistenertothesizebuttonssotheUserisabletochooseasize">setLitenerSize - function to add an event listener to the size buttonsso the User is able to choose a size</a></li><li><a href="global.html#setLitenerTheme-functiontoaddaneventlistenertothethemebuttonssotheUserisabletochooseatheme">setLitenerTheme - function to add an event listener to the theme buttonsso the User is able to choose a theme</a></li><li><a href="global.html#setThemeOnRootthisfunctionsetsthethemeaschosenbytheuserinthegameUserInterface">setThemeOnRoot this function sets the theme as chosen by the user in the game User Interface</a></li><li><a href="global.html#showPlayerOneWins-functiontoshowthecasewhereplayer1winsandrenderthehtmlcodeforthiscaseandsetaneventlistenerontheplayagainbuttontoreloadthepage">showPlayerOneWins - function to show the case where player 1 wins and render the html code for this caseand set an event listener on the play again button to reload the page</a></li><li><a href="global.html#showWinner-functiontoshowthewinneraccordingtothepoints">showWinner - function to show the winner according to the points</a></li><li><a href="global.html#showWinner-functiontoshowthewinneraccordingtothepointsthisfunctionissplittedintoforbothcases,showingplayer1winsorplayer2winsoritsadraw">showWinner - function to show the winner according to the pointsthis function is splitted into for both cases, showing player 1 wins or player 2 wins or its a draw</a></li><li><a href="global.html#shufflethisfunctionshufflesthearrayandgeneratesaramdomorderinthememorycardgame">shuffle this function shuffles the array and generates a ramdom order in the memory card game</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>main.ts</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+/**
+ * @param renderSettingsPage - function to render the settings page into the DOM
+ * @param generateGameUI - function to render the game UI into the DOM
+ * @param renderResultsUI - function to render the results  into the DOM
+ * 
+ */
+import './styles/main.scss';
+import { renderSettingsPage } from './renderSettings';
+import { generateGameUI} from './game';
+import { renderResultsUI } from "./result";
+
+/**
+ * @function addEventListener - function to add an event listener to the body element and get the current page
+ * this data attribut is used to navigate to the correct page
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = document.body.getAttribute('data-page') ?? 'start';
+    navigateTOPage(currentPage);
+})
+
+/**
+ * @function navigateTOPage - function to navigate to the correct page by asking the current page and select according to the case
+ * @function generateSettingsPage - function to render the settings page into the DOM
+ * @function generateGameUI - function to render the game UI into the DOM
+ * @function rnderResultsUI - function to render the results  into the DOM
+ * @default generateSettingsPage this is the default case, if an Error occurs
+ * @param currentPage the variable to store the data attribut on the body tag
+ */
+export function navigateTOPage(currentPage: string): void {
+    document.querySelector('body')!.setAttribute('data-page', currentPage);
+    switch (currentPage) {
+        case 'start':
+            setTimeout(() => {
+                generateSettingsPage();
+            }, 1000); break;
+        case 'game': generateGameUI(); break;
+        case 'result': renderResultsUI(); break;
+        default: generateSettingsPage(); break;
+    }
+}
+
+
+
+
+/**
+ * @function generateSettingsPage - function to render the settings page into the DOM
+ * @function setLitenerTheme - function to add an event listener to the theme buttons
+ * @function setLitenerPlayer - function to add an event listener to the player buttons
+ * @function setLitenerSize - function to add an event listener to the size buttons
+ * @returns void
+ */
+function generateSettingsPage(): void {
+    let setting = document.querySelector('.gameSettingsWrapper') as HTMLDivElement;
+    setting.innerHTML = "";
+    setting.innerHTML = renderSettingsPage();
+    setLitenerTheme();
+    setLitenerPlayer();
+    setLitenerSize();
+}
+
+
+// function init2() {
+//     const fieldRef = document.getElementById('card');
+//     if (fieldRef) {
+//         fieldRef.addEventListener('click', e => {
+//             const card = (e.target as HTMLElement).closest('.card') as HTMLButtonElement;
+//             if (card) {
+//                 card.classList.toggle('is-filtered');
+//                 console.log(card.classList);
+//             }
+//         })
+//     }
+// }
+
+// &lt;section id="field">
+//         &lt;button class="card">
+//             &lt;div class="card__inner">
+//                 &lt;div class="card__face">&lt;/div>
+//                 &lt;div class="card__face card__face--back">&lt;/div>
+//             &lt;/div>
+//         &lt;/button>
+//     &lt;/section>
+
+
+/**
+ * @function addEventListener - function to add an event listener to the start button
+ * if pressed, it slides the start content out of the screen
+ */
+const button: HTMLButtonElement = document.querySelector('.startButton') as HTMLButtonElement;
+if (button) {
+    button.addEventListener('click', (el) => {
+        const startContent: HTMLDivElement = document.querySelector('.startContent') as HTMLDivElement;
+        if (startContent) {
+            startContent.style.transition = '500ms ease-in-out';
+            startContent.style.position = 'absolute';
+            startContent.style.top = '0';
+            setTimeout(() => {
+                startContent.style.top = '-100%';
+            }, 100);
+        }
+    })
+}
+
+/**
+ * this sets the button to start the game disabled, until the theme, player and size are choosen
+ */
+const button2: HTMLButtonElement = document.querySelector('.startSession') as HTMLButtonElement;
+if (button2) {
+    button2.disabled = true;
+}
+
+/**
+ * here we we wait a second and set the opacity of the layer to 1
+ */
+const layer: HTMLButtonElement = document.querySelector('.gameSettingsWrapper') as HTMLButtonElement;
+if (layer) {
+    setTimeout(() => {
+        layer.style.opacity = '1';
+    }, 1000);;
+}
+
+
+/**
+ * @function setLitenerTheme - function to add an event listener to the theme buttons
+ * so the User is able to choose a theme
+ */
+function setLitenerTheme() {
+    const items = document.querySelectorAll&lt;HTMLElement>('.themes [data-theme]');
+    const image = document.querySelectorAll&lt;HTMLElement>('.themes img');
+    items.forEach((item: HTMLElement) => {
+        item.addEventListener('click', () => {
+            items.forEach((i: HTMLElement) => i.classList.remove('active'),
+            image.forEach((i: HTMLElement) => i.style.display = "none"))
+            const themeValue: string = item.getAttribute('data-theme')!;
+            chooseThemeSetting(themeValue);
+        });
+    });
+}
+
+/**
+ * @function chooseThemeSetting - function does show some additional css on each theme element
+ * @param theme the choosen theme
+ */
+function chooseThemeSetting(theme: string): void {
+    if (theme === 'codeVibes') {
+        chooseCodeVibes(theme);
+    }
+    if (theme === "gaming") {
+        chooseGaming(theme);
+    }
+    if (theme === "daproject") {
+        chooseDaproject(theme);
+    }
+}
+
+let vibe = false;
+let playerColor = false;
+let size = false;
+
+/**
+ * @function chooseCodeVibes - function does show some additional css on this specific li element
+ * @function chooseGaming - function does show some additional css on this specific li element
+ * @function chooseDaproject - function does show some additional css on this specific li element
+ * @param theme choosen theme
+ */
+function chooseCodeVibes(theme:string): void {
+    vibe = true;
+        const yellow = document.querySelector&lt;HTMLImageElement>(`.themes li[data-theme="${theme}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector&lt;HTMLImageElement>(`.themes li[data-theme="${theme}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar = document.querySelector&lt;HTMLDivElement>('.settingBar .theme') as HTMLDivElement;
+        bar.innerHTML = `${theme}`;
+}
+
+function chooseGaming(theme:string): void {
+    vibe = true;
+        const yellow = document.querySelector&lt;HTMLImageElement>(`.themes li[data-theme="${theme}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector&lt;HTMLImageElement>(`.themes li[data-theme="${theme}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar1 = document.querySelector&lt;HTMLDivElement>('.settingBar .theme') as HTMLDivElement;
+        bar1.innerHTML = `${theme}`;
+}
+
+function chooseDaproject(theme:string): void {
+    vibe = true;
+        const yellow = document.querySelector&lt;HTMLImageElement>(`.themes li[data-theme="${theme}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector&lt;HTMLImageElement>(`.themes li[data-theme="${theme}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar2 = document.querySelector&lt;HTMLDivElement>('.settingBar .theme') as HTMLDivElement;
+        bar2.innerHTML = `${theme}`;
+}
+
+/**
+ * @function setLitenerPlayer - function to add an event listener to the player buttons
+ * so the User is able to choose a player color
+ */
+function setLitenerPlayer() {
+    const items = document.querySelectorAll&lt;HTMLElement>('.choose [data-player]');
+    const image = document.querySelectorAll&lt;HTMLElement>('.choose img');
+    items.forEach((item: HTMLElement) => {
+        item.addEventListener('click', () => {
+            items.forEach((i: HTMLElement) => i.classList.remove('active'),
+                image.forEach((i: HTMLElement) => i.style.display = "none"));
+            const playerValue: string = item.getAttribute('data-player')!;
+            choosePlayerSetting(playerValue);
+        });
+    });
+}
+
+/**
+ * @function choosePlayerSetting - function decides which player color is choosen
+ * @param player player color
+ * @returns void
+ */
+function choosePlayerSetting(player: string): void {
+    if (player === 'Blue') {
+        chooseBlue(player);
+    }
+    if (player === "Orange") {
+        chooseOrange(player);
+    }
+}
+
+/**
+ * @function chooseBlue this function sets the css for the player blue
+ * @function chooseOrange this function sets the css for the player orange
+ * @returns void
+ */
+function chooseBlue(player:string): void {
+    playerColor = true;
+        const yellow = document.querySelector&lt;HTMLImageElement>(`.choose li[data-player="${player}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector&lt;HTMLImageElement>(`.choose li[data-player="${player}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar = document.querySelector&lt;HTMLDivElement>('.settingBar .player') as HTMLDivElement;
+        bar.innerHTML = `${player}`;
+}
+
+function chooseOrange(player:string): void {
+    playerColor = true;
+        const yellow = document.querySelector&lt;HTMLImageElement>(`.choose li[data-player="${player}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector&lt;HTMLImageElement>(`.choose li[data-player="${player}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar = document.querySelector&lt;HTMLDivElement>('.settingBar .player') as HTMLDivElement;
+        bar.innerHTML = `${player}`;
+}
+
+/**
+ * @function setLitenerSize - function to add an event listener to the size buttons
+ * so the User is able to choose a size
+ * @returns void
+ */
+function setLitenerSize() {
+    const items = document.querySelectorAll&lt;HTMLElement>('.size [data-amount]');
+    const image = document.querySelectorAll&lt;HTMLElement>('.size img');
+    items.forEach((item: HTMLElement) => {
+        item.addEventListener('click', () => {
+            items.forEach((i: HTMLElement) => i.classList.remove('active'),
+                image.forEach((i: HTMLElement) => i.style.display = "none"));
+            const sizeValue: string = item.getAttribute('data-amount')!;
+            chooseSizeSetting(sizeValue);
+        });
+    });
+}
+
+/**
+ * @function chooseSizeSetting - function decides which carddeck is choosen
+ * @param amount the carddeck the User has choosen
+ */
+function chooseSizeSetting(amount: string): void {
+    if (amount === '16') {
+        choose16(amount);
+    }
+    if (amount === "24") {
+        choose24(amount);
+    }
+    if (amount === "36") {
+        choose36(amount);
+    }
+}
+
+/**
+ * @function choose16 - this function sets the css for the 16 card deck
+ * @function choose24 - this function sets the css for the 24 card deck
+ * @function choose36 - this function sets the css for the 36 card deck
+ * @param amount 
+ */
+function choose16(amount:string): void {
+    size = true;
+        const yellow = document.querySelector&lt;HTMLImageElement>(`.size li[data-amount="${amount}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector&lt;HTMLImageElement>(`.size li[data-amount="${amount}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar = document.querySelector&lt;HTMLDivElement>('.settingBar .size') as HTMLDivElement;
+        bar.innerHTML = `${amount}`;
+}
+
+function choose24(amount:string): void {
+    size = true;
+        const yellow = document.querySelector&lt;HTMLImageElement>(`.size li[data-amount="${amount}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector&lt;HTMLImageElement>(`.size li[data-amount="${amount}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar = document.querySelector&lt;HTMLDivElement>('.settingBar .size') as HTMLDivElement;
+        bar.innerHTML = `${amount}`;
+}
+
+function choose36(amount:string): void {
+    size = true;
+        const yellow = document.querySelector&lt;HTMLImageElement>(`.size li[data-amount="${amount}"] img`) as HTMLImageElement;
+        yellow.style.display = "block";
+        const yellowB = document.querySelector&lt;HTMLImageElement>(`.size li[data-amount="${amount}"]`) as HTMLImageElement;
+        yellowB.classList.add('active');
+        let bar = document.querySelector&lt;HTMLDivElement>('.settingBar .size') as HTMLDivElement;
+        bar.innerHTML = `${amount}`;
+}
+
+/**
+ * @function readyToPlayIntervall - function to check if the User is ready to play and has choosen all options
+ * only if true the start button will be enabled
+ * @returns void
+ */
+let readyToPlayIntervall = setInterval(() => {
+    if (vibe &amp;&amp; playerColor &amp;&amp; size) {
+        clearInterval(readyToPlayIntervall);
+        const button2: HTMLButtonElement = document.querySelector('.startSession') as HTMLButtonElement;
+        if (button2) {
+            button2.disabled = false;
+            if (button2.disabled === false) {
+                button2.addEventListener('click', () => navigateTOPage('game'));
+            }
+        }
+    }
+}, 100);
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

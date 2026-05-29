@@ -35,8 +35,8 @@
     --defaultExitButtonShadow: inset 0 0 1px 3px rgb(73, 202, 178);
     --exitButtonBorderRadius: 10px;
     --exitGameButtonBackgroundSize: cover;
-    --exitImg:url(/project/assets/img/exitButton_default1.svg);
-    --exitButtonHover: url(/project/assets/img/exitButton_hover.svg);
+    --exitImg:url(/memory_app/assets/img/exitButton_default1.svg);
+    --exitButtonHover: url(/memory_app/assets/img/exitButton_hover.svg);
     --exitButtonParagraphColor: rgb(255, 255, 255);
 
     --cardRadius: 0px;
@@ -123,14 +123,14 @@
     --exitImgBackgroundColor: transparent;
     --exitBoxShadow: inset 0 0 3px 5px rgb(197, 42, 42);
     --exitGameButtonBackgroundSize: contain;
-    --exitImg:url(/project/assets/img/exitButton-gamingTheme.svg);
+    --exitImg:url(/memory_app/assets/img/exitButton-gamingTheme.svg);
     --exitButtonParagraphColor: rgb(255, 255, 255);
 
     --exitButtonYesBackgroundColorHover: rgb(255, 203, 203, 0.8);
     --exitButtonHoverShadow:inset 0 0 3px 1px rgb(202, 73, 73),
      0.5px 0.5px 3px 1px rgb(226, 139, 139);
     --defaultExitButtonShadow: inset 0 0 1px 3px rgb(209, 48, 8);
-    --exitButtonIcon: url(/project/assets/icons/exit_icon_red.svg);
+    --exitButtonIcon: url(/memory_app/assets/icons/exit_icon_red.svg);
     
     --cardRadius: 15px;
     --gap: 3px;
@@ -224,9 +224,9 @@
     --exitBoxShadow: inset 0 0 0px 0px rgb(247, 247, 247);
     --exitHoverColor: rgb(255, 255, 255);
     --exitButtonBorderRadius: 10px;
-    --exitButtonIcon: url(/project/assets/icons/exit_icon_white.svg);
+    --exitButtonIcon: url(/memory_app/assets/icons/exit_icon_white.svg);
     --exitButtonParagraphColor:rgb(30,117,148);
-    --exitImg:url(/project/assets/img/exitButton-daprojectsTheme.svg);
+    --exitImg:url(/memory_app/assets/img/exitButton-daprojectsTheme.svg);
     --cardRadius: 15px;
     --gap: 5px;
     --outline: 3px solid rgb(30,117,148);

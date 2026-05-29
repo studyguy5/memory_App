@@ -12,12 +12,12 @@ export function renderGameUI() {
     <div class="headGameInfo">
     <div class="playerInfo">
     <div class=player1>
-    <img src="${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_blue.svg' : 
-                themeImg === 'gaming' ? '/project/assets/icons/gaming_orange.svg' : '/project/assets/icons/gaming_orange.svg'}">${themeImg === 'codeVibes' ? 'Blue' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}<p>0</p>
+    <img src="${themeImg === 'codeVibes' ? '/memory_app/assets/icons/codeVibes_blue.svg' : 
+                themeImg === 'gaming' ? '/memory_app/assets/icons/gaming_orange.svg' : '/memory_app/assets/icons/gaming_orange.svg'}">${themeImg === 'codeVibes' ? 'Blue' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}<p>0</p>
                 </div>
             <div class=player2>
-            <img src="${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_orange.svg' : 
-                themeImg === 'gaming' ? '/project/assets/icons/gaming_blue.svg' : '/project/assets/icons/gaming_blue.svg'}">${themeImg === 'codeVibes' ? 'Orange' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}<p>0</p>
+            <img src="${themeImg === 'codeVibes' ? '/memory_app/assets/icons/codeVibes_orange.svg' : 
+                themeImg === 'gaming' ? '/memory_app/assets/icons/gaming_blue.svg' : '/memory_app/assets/icons/gaming_blue.svg'}">${themeImg === 'codeVibes' ? 'Orange' : themeImg === 'gaming' ? '' : themeImg === 'DA Project' ? '' : ''}<p>0</p>
                 </div>
                 </div>
                 <div class="currentPlayer">Current Player:
@@ -26,8 +26,8 @@ export function renderGameUI() {
             </div>
         </div>
         <div class="exitGame">
-        <img src="${themeImg === 'codeVibes' ? '/project/assets/icons/exit_icon_white.svg' : 
-            themeImg === 'gaming' ? '/project/assets/icons/exit_icon_white.svg' : '/project/assets/icons/exit_icon_blue.svg'}" alt="Exit Game Button">
+        <img src="${themeImg === 'codeVibes' ? '/memory_app/assets/icons/exit_icon_white.svg' : 
+            themeImg === 'gaming' ? '/memory_app/assets/icons/exit_icon_white.svg' : '/memory_app/assets/icons/exit_icon_blue.svg'}" alt="Exit Game Button">
             <p>Exit Game</p>   
             </div>
             
@@ -59,8 +59,8 @@ export function renderGameUI() {
         return /*html*/ `
                 <button id="card" class="card">
                     <div class="card__inner">
-                            <div class="card__face"><img src="${themeImg === 'codeVibes' ? '/project/assets/img/code_vibesBackside.svg' : themeImg === 'gaming'
-                        ? '/project/assets/img/gamingThemeBackside.svg' : '/project/assets/img/da_projectsBackside.svg'}" alt="backside"></div>
+                            <div class="card__face"><img src="${themeImg === 'codeVibes' ? '/memory_app/assets/img/code_vibesBackside.svg' : themeImg === 'gaming'
+                        ? '/memory_app/assets/img/gamingThemeBackside.svg' : '/memory_app/assets/img/da_projectsBackside.svg'}" alt="backside"></div>
                         <div class="card__face card__face--back">${element}</div>
                     </div>
                  </button>

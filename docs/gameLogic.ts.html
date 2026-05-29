@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> gameLogic.ts</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#activateExitWindowthisfunctionletstheexitwindowslidedownifweclickonexit">activateExitWindow this function lets the exit window slide down if we click on exit</a></li><li><a href="global.html#addEventListener-functiontoaddaneventlistenertothebodyelementandgetthecurrentpagethisdataattributisusedtonavigatetothecorrectpage">addEventListener - function to add an event listener to the body element and get the current pagethis data attribut is used to navigate to the correct page</a></li><li><a href="global.html#addEventListener-functiontoaddaneventlistenertothestartbuttonifpressed,itslidesthestartcontentoutofthescreen">addEventListener - function to add an event listener to the start buttonif pressed, it slides the start content out of the screen</a></li><li><a href="global.html#button2">button2</a></li><li><a href="global.html#cardsTemplatewereturnthehtmlcodeforasinglecard">cardsTemplate we return the html code for a single card</a></li><li><a href="global.html#checkForMatch-functiontocheckifthereisamatchontwoopencardsiftwoareopen,itchecksforamatchandclosesifdifferent">checkForMatch - function to check if there is a match on two open cardsif two are open, it checks for a match and closes if different</a></li><li><a href="global.html#choose36-thisfunctionsetsthecssforthe36carddeck">choose36 - this function sets the css for the 36 card deck</a></li><li><a href="global.html#chooseDaproject-functiondoesshowsomeadditionalcssonthisspecificlielement">chooseDaproject - function does show some additional css on this specific li element</a></li><li><a href="global.html#chooseOrangethisfunctionsetsthecssfortheplayerorange">chooseOrange this function sets the css for the player orange</a></li><li><a href="global.html#choosePlayerSetting-functiondecideswhichplayercolorischoosen">choosePlayerSetting - function decides which player color is choosen</a></li><li><a href="global.html#chooseSizeSetting-functiondecideswhichcarddeckischoosen">chooseSizeSetting - function decides which carddeck is choosen</a></li><li><a href="global.html#chooseThemeSetting-functiondoesshowsomeadditionalcssoneachthemeelement">chooseThemeSetting - function does show some additional css on each theme element</a></li><li><a href="global.html#closeTwoDiffrentCardsthisfunctionclosestwodifferentcards">closeTwoDiffrentCards this function closes two different cards</a></li><li><a href="global.html#getColumnsthisfunctionreturnstherightamountofcolumnsforthegame0">getColumns this function returns the right amount of columns for the game0</a></li><li><a href="global.html#handleClicksthisfunctionaddsaneventlistenertothebuttonsintheexitwindowandtriggersthebacktogameorexitfunctionifweclick">handleClicks this function adds an event listener to the buttons in the exit windowand triggers the back to game or exit function if we click</a></li><li><a href="global.html#handleTwoCardsthisfunctionhighlightamatchoncardsorclosestwodifferentcards">handleTwoCards this function highlight a match on cards or closes two different cards</a></li><li><a href="global.html#hideWrapperDivthisfunctionhidesthewrappersettingdivinordertomakeplaceforthegameUserInterface">hideWrapperDiv this function hides the wrapper setting div in order to make place for the game User Interface</a></li><li><a href="global.html#itsADrawTemplatewereturnthehtmlcodeforthecasewhereitsadraw">itsADrawTemplate we return the html code for the case where its a draw</a></li><li><a href="global.html#layer">layer</a></li><li><a href="global.html#letExitWindowSlideDownthisfunctionletstheexitwindowslidedownandchangesthecss">letExitWindowSlideDown this function lets the exit window slide down and changes the css</a></li><li><a href="global.html#playerOneWinsTemplatewereturnthehtmlcodeforthecasewhereplayeronewins">playerOneWinsTemplate we return the html code for the case where player one wins</a></li><li><a href="global.html#playerTwoWinsTemplatewereturnthehtmlcodeforthecasewhereplayertwowins">playerTwoWinsTemplate we return the html code for the case where player two wins</a></li><li><a href="global.html#readyToPlayIntervall-functiontocheckiftheUserisreadytoplayandhaschoosenalloptionsonlyiftruethestartbuttonwillbeenabled">readyToPlayIntervall - function to check if the User is ready to play and has choosen all optionsonly if true the start button will be enabled</a></li><li><a href="global.html#reloadpagethisfunctionreloadsthepage">reloadpage this function reloads the page</a></li><li><a href="global.html#renderAndSetUpGameUIthisfunctionrendersthegameUserInterfaceandsetsuptheeventlistenersforthecardsexitoption">renderAndSetUpGameUI this function renders the game User Interface and sets up the event listenersfor the cards exit option</a></li><li><a href="global.html#renderCardsthisfunctionrendersthecardsinthegamefieldcheckswhicharrayithastorender,shufflesitandrendersit">renderCards this function renders the cards in the game fieldchecks which array it has to render, shuffles it and renders it</a></li><li><a href="global.html#renderGameUI-functiontorenderthebasicgameUserInterface">renderGameUI - function to render the basic game User Interface</a></li><li><a href="global.html#renderResultsTemplatewereturnthehtmlcodefortheresults">renderResultsTemplate we return the html code for the results</a></li><li><a href="global.html#renderSettingsPage">renderSettingsPage</a></li><li><a href="global.html#rnderResultsUI-functiontorendertheresultsintotheDOM">rnderResultsUI - function to render the results  into the DOM</a></li><li><a href="global.html#setGlobalPlayerthisfunctionallowsustochangethevariableglobalPlayerinadifferentfilewhileexportingit">setGlobalPlayer this function allows us to change the variable globalPlayer in a different file while exporting it</a></li><li><a href="global.html#setGlobalPlayerthisfunctionsetstheglobalplayerasvalueorparameterinordertouseandchangeitinanotherfile">setGlobalPlayer this function sets the global player as value or parameter in order to use and change it in another file</a></li><li><a href="global.html#setImageForBluePlayerthisfunctionsetstheimagefortheblueplayer">setImageForBluePlayer this function sets the image for the blue player</a></li><li><a href="global.html#setListenerPlayerthisfunctionsetstheeventlistenerforthecardsandopensacardafterclickbyaddingtheis-filteredclass">setListenerPlayer this function sets the event listener for the cards and opens a card after clickby adding the is-filtered class</a></li><li><a href="global.html#setLitenerPlayer-functiontoaddaneventlistenertotheplayerbuttonssotheUserisabletochooseaplayercolor">setLitenerPlayer - function to add an event listener to the player buttonsso the User is able to choose a player color</a></li><li><a href="global.html#setLitenerSize-functiontoaddaneventlistenertothesizebuttons">setLitenerSize - function to add an event listener to the size buttons</a></li><li><a href="global.html#setLitenerSize-functiontoaddaneventlistenertothesizebuttonssotheUserisabletochooseasize">setLitenerSize - function to add an event listener to the size buttonsso the User is able to choose a size</a></li><li><a href="global.html#setLitenerTheme-functiontoaddaneventlistenertothethemebuttonssotheUserisabletochooseatheme">setLitenerTheme - function to add an event listener to the theme buttonsso the User is able to choose a theme</a></li><li><a href="global.html#setThemeOnRootthisfunctionsetsthethemeaschosenbytheuserinthegameUserInterface">setThemeOnRoot this function sets the theme as chosen by the user in the game User Interface</a></li><li><a href="global.html#showPlayerOneWins-functiontoshowthecasewhereplayer1winsandrenderthehtmlcodeforthiscaseandsetaneventlistenerontheplayagainbuttontoreloadthepage">showPlayerOneWins - function to show the case where player 1 wins and render the html code for this caseand set an event listener on the play again button to reload the page</a></li><li><a href="global.html#showWinner-functiontoshowthewinneraccordingtothepoints">showWinner - function to show the winner according to the points</a></li><li><a href="global.html#showWinner-functiontoshowthewinneraccordingtothepointsthisfunctionissplittedintoforbothcases,showingplayer1winsorplayer2winsoritsadraw">showWinner - function to show the winner according to the pointsthis function is splitted into for both cases, showing player 1 wins or player 2 wins or its a draw</a></li><li><a href="global.html#shufflethisfunctionshufflesthearrayandgeneratesaramdomorderinthememorycardgame">shuffle this function shuffles the array and generates a ramdom order in the memory card game</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>gameLogic.ts</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+/**
+ * @param navigateTOPage - function to navigate to the correct page is imported from main.ts
+ * @param state - this varaible is exportet from main.ts
+ * @param matchWon - this varaible is exportet from main.ts
+ * @param player1Points - this varaible is exportet from main.ts
+ * @param player2Points - this varaible is exportet from main.ts
+ * @param globalPlayer - this varaible is exportet from game.ts
+ * @param setGlobalPlayer - this varaible is exportet from game.ts
+ */
+import {navigateTOPage} from "./main";
+export const state = {once: false};
+export let matchWon = false;
+export let player1Points = "0";
+export let player2Points = "0";
+import { globalPlayer, setGlobalPlayer } from "./game";
+
+/**
+ * @function checkForMatch - function to check if there is a match on two open cards
+ * if two are open, it checks for a match and closes if different
+ */
+export function checkForMatch() {
+    setTimeout(() => {
+        if(document.querySelectorAll('.card.is-filtered.matched').length === (document.querySelectorAll('.gameField .card') as NodeListOf&lt;HTMLButtonElement>).length) {
+            checkIfGameIsComplete();}
+    }, 500);
+    player1Points = document.querySelector(`.player1 p`)!.textContent;
+    player2Points = document.querySelector(`.player2 p`)!.textContent;
+        const open = document.querySelectorAll('.card.is-filtered:not(.matched)') as NodeListOf&lt;HTMLButtonElement>;
+        if (open.length > 1 &amp;&amp; !open[0].classList.contains('matched') &amp;&amp; !open[1].classList.contains('matched')) {
+            handleTwoCards(open, player1Points, player2Points);
+            }
+        }
+
+/**
+ * 
+ * @function handleTwoCards this function highlight a match on cards or closes two different cards
+ * @param open the two open cards are stored in this variable
+ * @param player1Points 
+ * @param player2Points 
+ */
+    function handleTwoCards(open: NodeListOf&lt;HTMLButtonElement>, player1Points:string, player2Points:string) {
+        const firstCard = open[0].querySelector('.card__face--back') as HTMLDivElement;
+            const secondCard = open[1].querySelector('.card__face--back') as HTMLDivElement;
+            const pair: HTMLButtonElement[] = [open[0], open[1]];
+            if (firstCard &amp;&amp; secondCard &amp;&amp; firstCard.innerHTML === secondCard.innerHTML) {
+                highlightPair(pair, player1Points, player2Points);
+            } else {
+                closeTwoDiffrentCards(pair);
+                }
+    }
+    
+/**
+ * 
+ * @function highlightPair this function highlights a match with a border
+ * @function setGlobalPlayer this function allows us to change the variable globalPlayer in a different file while exporting it
+ * @param player1Points 
+ * @param player2Points 
+ * @returns void
+ */
+    function highlightPair(pair: HTMLButtonElement[], player1Points:string, player2Points:string){
+        pair.forEach(cardEl => {
+                    cardEl.classList.add('matched');
+                    const img = cardEl.querySelector('.card__face--back img') as HTMLImageElement | null;
+                    if (img) {
+                        img.classList.add('machedImg');
+                    }
+                });
+                   setGlobalPlayer(updatePointsAndPlayer(globalPlayer, player1Points ? Number(player1Points) : 0, player2Points ? Number(player2Points) : 0));
+    }
+
+    /**
+     * @function closeTwoDiffrentCards this function closes two different cards
+     * @param pair 
+     * @returns void
+     */
+    function closeTwoDiffrentCards(pair: HTMLButtonElement[]) {
+        setTimeout(() => {
+                    pair.forEach(pair => {
+                        pair.classList.remove('is-filtered');
+                    });
+                }, 500);
+                    setGlobalPlayer(switchPlayer(globalPlayer));
+    }
+
+
+    /**
+     * 
+     * @function checkIfGameIsComplete this function checks if the game is complete and if it is, it navigates to the result page
+     * @returns void
+     */
+ export  function checkIfGameIsComplete(){
+        if(!matchWon)
+        setTimeout(() => {
+            matchWon = true;            
+            navigateTOPage('result');
+        }, 500);
+    }
+    
+
+    /**
+     * @function switchPlayer this function switches the player, if a player opens two different cards
+     * @param globalPlayer 
+     * @returns globalPlayer
+     */
+function switchPlayer(globalPlayer: string): string {
+    let themeImg: string | null = '';
+    themeImg = document.documentElement.getAttribute('data-theme');
+    globalPlayer = globalPlayer.toUpperCase();
+    globalPlayer = globalPlayer === 'BLUE' ? 'ORANGE' : 'BLUE';
+    let rightPlayer = document.querySelector&lt;HTMLImageElement>('.currentPlayer img') as HTMLImageElement;
+    let rightPlayerImg = document.querySelector&lt;HTMLImageElement>('.currentPlayerImg') as HTMLImageElement;
+    if(globalPlayer === 'ORANGE') {
+        setImageForOrangePlayer(themeImg, rightPlayerImg, rightPlayer);
+    } else {
+        setImageForBluePlayer(themeImg, rightPlayerImg, rightPlayer);
+    }
+    return globalPlayer;
+}
+
+/**
+ * @function setImageForOrangePlayer this function sets the image for the orange player
+ * @function setImageForBluePlayer this function sets the image for the blue player
+ * @param themeImg 
+ * @param rightPlayerImg 
+ * @param rightPlayer 
+ * @returns void
+ */
+function setImageForOrangePlayer(themeImg:string| null, rightPlayerImg:HTMLImageElement | null, rightPlayer:HTMLImageElement | null) {
+    if(rightPlayer)
+    rightPlayer.src = `${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_orange.svg' : '/project/assets/icons/gaming_white.svg'}`;
+        if(themeImg === 'gaming' || themeImg === 'daproject') {
+            if(rightPlayerImg)
+        rightPlayerImg.style.background = "orange"
+        }
+}
+
+function setImageForBluePlayer(themeImg:string| null, rightPlayerImg:HTMLImageElement | null, rightPlayer:HTMLImageElement | null) {
+    if(rightPlayer)
+    rightPlayer.src = `${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_blue.svg' : '/project/assets/icons/gaming_white.svg'}`;
+        if(themeImg === 'gaming' || themeImg === 'daproject') {
+            if(rightPlayerImg)
+        rightPlayerImg.style.background = "blue"
+        }
+}
+
+/**
+ * @function updatePointsAndPlayer this function updates the points of the current player, which opened a match
+ * @param globalPlayer 
+ * @param player1Points 
+ * @param player2Points 
+ * @returns globalPlayer
+ */
+export function updatePointsAndPlayer(globalPlayer: string, player1Points: number, player2Points: number): string{
+    globalPlayer = globalPlayer.toUpperCase();
+    let themeImg: string | null = '';
+    themeImg = document.documentElement.getAttribute('data-theme');
+    if(themeImg === 'gaming' || themeImg === 'daproject') {
+    document.querySelector(`.player2 p`)!.textContent = globalPlayer == 'BLUE' ? (player2Points + 1).toString() : document.querySelector(`.player2 p`)!.textContent;
+    document.querySelector(`.player1 p`)!.textContent = globalPlayer == 'ORANGE' ? (player1Points + 1).toString() : document.querySelector(`.player1 p`)!.textContent;
+    return globalPlayer;
+    }else{
+    document.querySelector(`.player1 p`)!.textContent = globalPlayer == 'BLUE' ? (player1Points + 1).toString() : document.querySelector(`.player1 p`)!.textContent;
+    document.querySelector(`.player2 p`)!.textContent = globalPlayer == 'ORANGE' ? (player2Points + 1).toString() : document.querySelector(`.player2 p`)!.textContent;
+    return globalPlayer;
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

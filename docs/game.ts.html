@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> game.ts</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#activateExitWindowthisfunctionletstheexitwindowslidedownifweclickonexit">activateExitWindow this function lets the exit window slide down if we click on exit</a></li><li><a href="global.html#addEventListener-functiontoaddaneventlistenertothebodyelementandgetthecurrentpagethisdataattributisusedtonavigatetothecorrectpage">addEventListener - function to add an event listener to the body element and get the current pagethis data attribut is used to navigate to the correct page</a></li><li><a href="global.html#addEventListener-functiontoaddaneventlistenertothestartbuttonifpressed,itslidesthestartcontentoutofthescreen">addEventListener - function to add an event listener to the start buttonif pressed, it slides the start content out of the screen</a></li><li><a href="global.html#button2">button2</a></li><li><a href="global.html#cardsTemplatewereturnthehtmlcodeforasinglecard">cardsTemplate we return the html code for a single card</a></li><li><a href="global.html#checkForMatch-functiontocheckifthereisamatchontwoopencardsiftwoareopen,itchecksforamatchandclosesifdifferent">checkForMatch - function to check if there is a match on two open cardsif two are open, it checks for a match and closes if different</a></li><li><a href="global.html#choose36-thisfunctionsetsthecssforthe36carddeck">choose36 - this function sets the css for the 36 card deck</a></li><li><a href="global.html#chooseDaproject-functiondoesshowsomeadditionalcssonthisspecificlielement">chooseDaproject - function does show some additional css on this specific li element</a></li><li><a href="global.html#chooseOrangethisfunctionsetsthecssfortheplayerorange">chooseOrange this function sets the css for the player orange</a></li><li><a href="global.html#choosePlayerSetting-functiondecideswhichplayercolorischoosen">choosePlayerSetting - function decides which player color is choosen</a></li><li><a href="global.html#chooseSizeSetting-functiondecideswhichcarddeckischoosen">chooseSizeSetting - function decides which carddeck is choosen</a></li><li><a href="global.html#chooseThemeSetting-functiondoesshowsomeadditionalcssoneachthemeelement">chooseThemeSetting - function does show some additional css on each theme element</a></li><li><a href="global.html#closeTwoDiffrentCardsthisfunctionclosestwodifferentcards">closeTwoDiffrentCards this function closes two different cards</a></li><li><a href="global.html#getColumnsthisfunctionreturnstherightamountofcolumnsforthegame0">getColumns this function returns the right amount of columns for the game0</a></li><li><a href="global.html#handleClicksthisfunctionaddsaneventlistenertothebuttonsintheexitwindowandtriggersthebacktogameorexitfunctionifweclick">handleClicks this function adds an event listener to the buttons in the exit windowand triggers the back to game or exit function if we click</a></li><li><a href="global.html#handleTwoCardsthisfunctionhighlightamatchoncardsorclosestwodifferentcards">handleTwoCards this function highlight a match on cards or closes two different cards</a></li><li><a href="global.html#hideWrapperDivthisfunctionhidesthewrappersettingdivinordertomakeplaceforthegameUserInterface">hideWrapperDiv this function hides the wrapper setting div in order to make place for the game User Interface</a></li><li><a href="global.html#itsADrawTemplatewereturnthehtmlcodeforthecasewhereitsadraw">itsADrawTemplate we return the html code for the case where its a draw</a></li><li><a href="global.html#layer">layer</a></li><li><a href="global.html#letExitWindowSlideDownthisfunctionletstheexitwindowslidedownandchangesthecss">letExitWindowSlideDown this function lets the exit window slide down and changes the css</a></li><li><a href="global.html#playerOneWinsTemplatewereturnthehtmlcodeforthecasewhereplayeronewins">playerOneWinsTemplate we return the html code for the case where player one wins</a></li><li><a href="global.html#playerTwoWinsTemplatewereturnthehtmlcodeforthecasewhereplayertwowins">playerTwoWinsTemplate we return the html code for the case where player two wins</a></li><li><a href="global.html#readyToPlayIntervall-functiontocheckiftheUserisreadytoplayandhaschoosenalloptionsonlyiftruethestartbuttonwillbeenabled">readyToPlayIntervall - function to check if the User is ready to play and has choosen all optionsonly if true the start button will be enabled</a></li><li><a href="global.html#reloadpagethisfunctionreloadsthepage">reloadpage this function reloads the page</a></li><li><a href="global.html#renderAndSetUpGameUIthisfunctionrendersthegameUserInterfaceandsetsuptheeventlistenersforthecardsexitoption">renderAndSetUpGameUI this function renders the game User Interface and sets up the event listenersfor the cards exit option</a></li><li><a href="global.html#renderCardsthisfunctionrendersthecardsinthegamefieldcheckswhicharrayithastorender,shufflesitandrendersit">renderCards this function renders the cards in the game fieldchecks which array it has to render, shuffles it and renders it</a></li><li><a href="global.html#renderGameUI-functiontorenderthebasicgameUserInterface">renderGameUI - function to render the basic game User Interface</a></li><li><a href="global.html#renderResultsTemplatewereturnthehtmlcodefortheresults">renderResultsTemplate we return the html code for the results</a></li><li><a href="global.html#renderSettingsPage">renderSettingsPage</a></li><li><a href="global.html#rnderResultsUI-functiontorendertheresultsintotheDOM">rnderResultsUI - function to render the results  into the DOM</a></li><li><a href="global.html#setGlobalPlayerthisfunctionallowsustochangethevariableglobalPlayerinadifferentfilewhileexportingit">setGlobalPlayer this function allows us to change the variable globalPlayer in a different file while exporting it</a></li><li><a href="global.html#setGlobalPlayerthisfunctionsetstheglobalplayerasvalueorparameterinordertouseandchangeitinanotherfile">setGlobalPlayer this function sets the global player as value or parameter in order to use and change it in another file</a></li><li><a href="global.html#setImageForBluePlayerthisfunctionsetstheimagefortheblueplayer">setImageForBluePlayer this function sets the image for the blue player</a></li><li><a href="global.html#setListenerPlayerthisfunctionsetstheeventlistenerforthecardsandopensacardafterclickbyaddingtheis-filteredclass">setListenerPlayer this function sets the event listener for the cards and opens a card after clickby adding the is-filtered class</a></li><li><a href="global.html#setLitenerPlayer-functiontoaddaneventlistenertotheplayerbuttonssotheUserisabletochooseaplayercolor">setLitenerPlayer - function to add an event listener to the player buttonsso the User is able to choose a player color</a></li><li><a href="global.html#setLitenerSize-functiontoaddaneventlistenertothesizebuttons">setLitenerSize - function to add an event listener to the size buttons</a></li><li><a href="global.html#setLitenerSize-functiontoaddaneventlistenertothesizebuttonssotheUserisabletochooseasize">setLitenerSize - function to add an event listener to the size buttonsso the User is able to choose a size</a></li><li><a href="global.html#setLitenerTheme-functiontoaddaneventlistenertothethemebuttonssotheUserisabletochooseatheme">setLitenerTheme - function to add an event listener to the theme buttonsso the User is able to choose a theme</a></li><li><a href="global.html#setThemeOnRootthisfunctionsetsthethemeaschosenbytheuserinthegameUserInterface">setThemeOnRoot this function sets the theme as chosen by the user in the game User Interface</a></li><li><a href="global.html#showPlayerOneWins-functiontoshowthecasewhereplayer1winsandrenderthehtmlcodeforthiscaseandsetaneventlistenerontheplayagainbuttontoreloadthepage">showPlayerOneWins - function to show the case where player 1 wins and render the html code for this caseand set an event listener on the play again button to reload the page</a></li><li><a href="global.html#showWinner-functiontoshowthewinneraccordingtothepoints">showWinner - function to show the winner according to the points</a></li><li><a href="global.html#showWinner-functiontoshowthewinneraccordingtothepointsthisfunctionissplittedintoforbothcases,showingplayer1winsorplayer2winsoritsadraw">showWinner - function to show the winner according to the pointsthis function is splitted into for both cases, showing player 1 wins or player 2 wins or its a draw</a></li><li><a href="global.html#shufflethisfunctionshufflesthearrayandgeneratesaramdomorderinthememorycardgame">shuffle this function shuffles the array and generates a ramdom order in the memory card game</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>game.ts</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+
+/**
+ * @param renderGameUI - imported function to render the basic game User Interface
+ * @param navigateTOPage - imported function to navigate to the correct page
+ * @param checkForMatch - imported function to check if a player has opened a match
+ * @param cardsTemplate - imported function to render the cards
+ * @param globalPlayer - variable to store the current player is here defined
+ */
+import { renderGameUI } from "./renderGame";
+import { navigateTOPage } from "./main";
+import { checkForMatch } from "./gameLogic";
+import { cardsTemplate } from "./renderGame";
+let globalPlayer: string = '';
+
+/**
+ * @function generateGameUI this function generates the game User Interface
+ * @function hideWrapperDiv this function hides the wrapper setting div in order to show the game User Interface
+ * after that
+ * @function renderAndSetUpGameUI this function renders the game User Interface and sets up the event listeners
+ * for the cards exit option
+ * @returns void
+ */
+export function generateGameUI(): void {
+    let wrapper = document.querySelector&lt;HTMLDivElement>('.gameSettingsWrapper');
+    globalPlayer = document.querySelector&lt;HTMLDivElement>('.player')?.innerHTML.toUpperCase() || '';
+    if (wrapper) {
+        hideWrapperDiv(wrapper);
+    }
+    let theme = document.querySelector&lt;HTMLDivElement>('.theme') as HTMLDivElement;
+    document.documentElement.setAttribute('data-theme', `${theme.innerHTML}`);
+    let game = document.querySelector&lt;HTMLDivElement>('.gameUI') as HTMLDivElement;
+    if (game) {
+        renderAndSetUpGameUI(game);  
+    };
+}
+
+/**
+ * @function hideWrapperDiv this function hides the wrapper setting div in order to make place for the game User Interface
+ * @param wrapper
+ * @returns void 
+ */
+function hideWrapperDiv(wrapper: HTMLDivElement) {
+    wrapper.style.display = 'none';
+    wrapper.style.opacity = '0';
+}
+
+/**
+ * @function renderAndSetUpGameUI this function renders the game User Interface and sets up the event listeners
+ * for the cards exit option
+ * @param game 
+ * @returns void
+ */
+function renderAndSetUpGameUI(game: HTMLDivElement) {
+    game.innerHTML = renderGameUI();
+        document.querySelector('.yes')?.addEventListener('click', reloadpage);
+        activateExitWindow();
+        setThemeOnRoot();
+        setTimeout(() => {
+            renderCards();
+        }, 300);
+}
+
+/**
+ * @function reloadpage this function reloads the page
+ * @returns void
+ */
+function reloadpage() {
+    window.location.reload();
+}
+
+
+/**
+ * @function setThemeOnRoot this function sets the theme as chosen by the user in the game User Interface
+ * @param col this col variable is to decide which card set the User has chosen and set the columns accordingly
+ * @returns void
+ */
+let col = 0;
+
+export function setThemeOnRoot(): void {
+    let themeImg: string | null = '';
+    themeImg = document.documentElement.getAttribute('data-theme');
+    let choosenPlayer = document.querySelector&lt;HTMLDivElement>('.player')?.innerHTML.toLocaleLowerCase() || '';
+    globalPlayer = choosenPlayer;
+    let size = document.querySelector&lt;HTMLDivElement>('.size .active') as HTMLDivElement;
+    let t = size.getAttribute('data-amount');
+    col = Number(t);
+    let rightPlayerImg = document.querySelector&lt;HTMLImageElement>('.currentPlayerImg') as HTMLImageElement;
+    let rightPlayer = document.querySelector&lt;HTMLImageElement>('.currentPlayerImg img') as HTMLImageElement;
+    setRightPlayerIconAndBackground(themeImg, choosenPlayer, rightPlayerImg, rightPlayer);
+}
+
+/**
+ * @function setRightPlayerIconAndBackground this function sets the right player icon and background in the middle of the game, top side
+ * @param themeImg 
+ * @param choosenPlayer 
+ * @param rightPlayerImg 
+ * @param rightPlayer 
+ * @returns void
+ */
+function setRightPlayerIconAndBackground(themeImg: string | null, choosenPlayer: string, rightPlayerImg: HTMLImageElement, rightPlayer: HTMLImageElement) {
+    if (rightPlayer) {
+        rightPlayer.src = `${themeImg === 'codeVibes' ? `/project/assets/icons/codeVibes_${choosenPlayer}.svg` :
+        themeImg === 'gaming' ? `/project/assets/icons/gaming_white.svg` : `/project/assets/icons/gaming_white.svg`}`;
+    }
+    if (themeImg === 'gaming' || themeImg === 'daproject') {
+        rightPlayerImg.style.background = choosenPlayer === 'blue' ? "blue" : "orange";
+    }
+}
+
+/**
+ * @function setGlobalPlayer this function sets the global player as value or parameter in order to use and change it in another file
+ * @param value 
+ * @returns { globalPlayer }
+ */
+export function setGlobalPlayer(value: string) {
+    globalPlayer = value;
+}
+
+/**
+ * @param globalPlayer here we export the variable globalPlayer
+ * @param rightArray here we choose which card set the player wants, and select the right arraay to show the right data source for the cards
+ */
+export { globalPlayer };
+export let rightArray: string[] = [];
+
+/**
+ * @function getColumns this function returns the right amount of columns for the game0
+ * @param col 
+ * @returns void
+ */
+function getColumns(col: number): number {
+    let theme = document.documentElement.getAttribute('data-theme');
+    switch (col) {
+        case col = 16:
+            rightArray = cardThemes[theme + 'Theme'].card_16;
+            return 4;
+            case col = 24:
+            rightArray = cardThemes[theme + 'Theme'].card_24;
+            return 6;
+            case col = 36:
+                rightArray = cardThemes[theme + 'Theme'].card_36;
+            return 6;
+            default: return 4;
+        }
+}
+import { state } from "./gameLogic";
+
+/**
+ * @function setListenerPlayer this function sets the event listener for the cards and opens a card after click
+ * by adding the is-filtered class
+ * @returns void
+ */
+function setListenerPlayer() {
+    const fieldRef = document.querySelectorAll('.card') as NodeListOf&lt;HTMLButtonElement>;
+    if (fieldRef) {
+        fieldRef.forEach(card => {
+            card.addEventListener('click', () => {
+                state.once = false;
+                setTimeout(() => {
+                    checkForMatch();
+                }, 200);
+                card.classList.toggle('is-filtered');
+            })
+        });
+    };
+}
+
+import { cardThemes } from "./cardSize";
+
+/**
+ * @function renderCards this function renders the cards in the game field
+ * checks which array it has to render, shuffles it and renders it
+ * @returns void
+ */
+function renderCards(): void {
+    let themeImg = document.documentElement.getAttribute('data-theme');
+    let field = document.querySelector&lt;HTMLDivElement>('.gameField') as HTMLDivElement;
+    if (field) {
+        let column: number = getColumns(col);
+        rightArray.length == 8 || rightArray.length == 12 ? field.style.height = '498px' : field.style.height = '750px';
+        field.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
+        for (let index = 0; index &lt; 2; index++) {
+            const shuffled: string[] = shuffle(rightArray);
+            for (let i = 0; i &lt; shuffled.length; i++) {
+                const element = shuffled[i];
+                field.innerHTML += cardsTemplate(themeImg, element);
+            }
+        }
+        document.querySelectorAll&lt;HTMLElement>('.card').forEach((card, i) => {
+            card.style.animationDelay = `${i * 0.05}s`; // 50ms Abstand zwischen jeder Karte
+        });
+        setListenerPlayer();
+    }
+}
+
+/**
+ * @function shuffle this function shuffles the array and generates a ramdom order in the memory card game
+ * @param rightArray 
+ * @returns { rightArray }
+ */
+function shuffle(rightArray: string[]): string[] {
+    let currentIndex = rightArray.length;
+    while (currentIndex != 0) { // While there remain elements to shuffle..
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        // And swap it with the current element.
+        [rightArray[currentIndex], rightArray[randomIndex]] = [
+            rightArray[randomIndex], rightArray[currentIndex]];
+    }
+    return rightArray;
+}
+
+
+/**
+ * @function activateExitWindow this function lets the exit window slide down if we click on exit
+ * @returns void
+ */
+function activateExitWindow() {
+    let exitBtn = document.querySelector('.exitGame') as HTMLDivElement;
+    let wrapper = document.querySelector('.exitPopupWrapper') as HTMLDivElement;
+    let exitWindow = document.querySelector('.exitGamePopup') as HTMLDivElement;
+    if (exitBtn &amp;&amp; exitWindow) {
+        letExitWindowSlideDown(exitBtn, exitWindow, wrapper);
+    }
+}
+
+/**
+ * @function letExitWindowSlideDown this function lets the exit window slide down and changes the css
+ * @param exitBtn 
+ * @param exitWindow 
+ * @param wrapper 
+ * @returns void
+ */
+function letExitWindowSlideDown(exitBtn: HTMLDivElement, exitWindow: HTMLDivElement, wrapper: HTMLDivElement) {
+    exitBtn.addEventListener('click', () => {
+        wrapper.style.transition = '500ms ease-in-out';
+        wrapper.style.opacity = '1';
+        wrapper.style.top = '0%';
+        exitWindow.style.transition = '500ms ease-in-out';
+        exitWindow.style.top = '330px';
+        handleClicks(exitWindow, wrapper);
+    });
+}
+
+/**
+ * @function handleClicks this function adds an event listener to the buttons in the exit window
+ * and triggers the back to game or exit function if we click
+ * @param exitWindow 
+ * @param wrapper 
+ * @returns void
+ */
+function handleClicks(exitWindow: HTMLDivElement, wrapper: HTMLDivElement) {
+    let yesBtn = document.querySelector('.exitGamePopup .yes') as HTMLButtonElement;
+    let noBtn = document.querySelector('.exitGamePopup .no') as HTMLButtonElement;
+    if (yesBtn) {
+        yesBtn.addEventListener('click', () => {
+            navigateTOPage('start');
+        })
+    }
+    if (noBtn) {
+        noBtn.addEventListener('click', () => {
+            exitWindow.style.top = '-290px';
+            wrapper.style.top = '-100%';
+        })
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

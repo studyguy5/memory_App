@@ -128,7 +128,7 @@ function switchPlayer(globalPlayer: string): string {
  */
 function setImageForOrangePlayer(themeImg:string| null, rightPlayerImg:HTMLImageElement | null, rightPlayer:HTMLImageElement | null) {
     if(rightPlayer)
-    rightPlayer.src = `${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_orange.svg' : '/project/assets/icons/gaming_white.svg'}`;
+    rightPlayer.src = `${themeImg === 'codeVibes' ? '/memory_app/assets/icons/codeVibes_orange.svg' : '/memory_app/assets/icons/gaming_white.svg'}`;
         if(themeImg === 'gaming' || themeImg === 'daproject') {
             if(rightPlayerImg)
         rightPlayerImg.style.background = "orange"
@@ -137,7 +137,7 @@ function setImageForOrangePlayer(themeImg:string| null, rightPlayerImg:HTMLImage
 
 function setImageForBluePlayer(themeImg:string| null, rightPlayerImg:HTMLImageElement | null, rightPlayer:HTMLImageElement | null) {
     if(rightPlayer)
-    rightPlayer.src = `${themeImg === 'codeVibes' ? '/project/assets/icons/codeVibes_blue.svg' : '/project/assets/icons/gaming_white.svg'}`;
+    rightPlayer.src = `${themeImg === 'codeVibes' ? '/memory_app/assets/icons/codeVibes_blue.svg' : '/memory_app/assets/icons/gaming_white.svg'}`;
         if(themeImg === 'gaming' || themeImg === 'daproject') {
             if(rightPlayerImg)
         rightPlayerImg.style.background = "blue"

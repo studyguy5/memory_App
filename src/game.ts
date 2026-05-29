@@ -63,6 +63,7 @@ function renderAndSetUpGameUI(game: HTMLDivElement) {
 
 /**
  * @function reloadpage this function reloads the page
+ * @returns void
  */
 function reloadpage() {
     window.location.reload();
@@ -72,6 +73,7 @@ function reloadpage() {
 /**
  * @function setThemeOnRoot this function sets the theme as chosen by the user in the game User Interface
  * @param col this col variable is to decide which card set the User has chosen and set the columns accordingly
+ * @returns void
  */
 let col = 0;
 
@@ -86,8 +88,6 @@ export function setThemeOnRoot(): void {
     let rightPlayerImg = document.querySelector<HTMLImageElement>('.currentPlayerImg') as HTMLImageElement;
     let rightPlayer = document.querySelector<HTMLImageElement>('.currentPlayerImg img') as HTMLImageElement;
     setRightPlayerIconAndBackground(themeImg, choosenPlayer, rightPlayerImg, rightPlayer);
-    
-    
 }
 
 /**
@@ -96,11 +96,12 @@ export function setThemeOnRoot(): void {
  * @param choosenPlayer 
  * @param rightPlayerImg 
  * @param rightPlayer 
+ * @returns void
  */
 function setRightPlayerIconAndBackground(themeImg: string | null, choosenPlayer: string, rightPlayerImg: HTMLImageElement, rightPlayer: HTMLImageElement) {
     if (rightPlayer) {
-        rightPlayer.src = `${themeImg === 'codeVibes' ? `/project/assets/icons/codeVibes_${choosenPlayer}.svg` :
-        themeImg === 'gaming' ? `/project/assets/icons/gaming_white.svg` : `/project/assets/icons/gaming_white.svg`}`;
+        rightPlayer.src = `${themeImg === 'codeVibes' ? `/memory_app/assets/icons/codeVibes_${choosenPlayer}.svg` :
+        themeImg === 'gaming' ? `/memory_app/assets/icons/gaming_white.svg` : `/memory_app/assets/icons/gaming_white.svg`}`;
     }
     if (themeImg === 'gaming' || themeImg === 'daproject') {
         rightPlayerImg.style.background = choosenPlayer === 'blue' ? "blue" : "orange";
@@ -110,7 +111,7 @@ function setRightPlayerIconAndBackground(themeImg: string | null, choosenPlayer:
 /**
  * @function setGlobalPlayer this function sets the global player as value or parameter in order to use and change it in another file
  * @param value 
- * @returns globalPlayer
+ * @returns { globalPlayer }
  */
 export function setGlobalPlayer(value: string) {
     globalPlayer = value;
@@ -126,7 +127,7 @@ export let rightArray: string[] = [];
 /**
  * @function getColumns this function returns the right amount of columns for the game0
  * @param col 
- * @returns 
+ * @returns void
  */
 function getColumns(col: number): number {
     let theme = document.documentElement.getAttribute('data-theme');
@@ -196,7 +197,7 @@ function renderCards(): void {
 /**
  * @function shuffle this function shuffles the array and generates a ramdom order in the memory card game
  * @param rightArray 
- * @returns 
+ * @returns { rightArray }
  */
 function shuffle(rightArray: string[]): string[] {
     let currentIndex = rightArray.length;

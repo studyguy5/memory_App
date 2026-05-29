@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     /* Sprache & Zielumgebung */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
     "outDir": "./dist", // Ausgabe-Verzeichnis
     "target": "ESNext", // moderne Syntax, gut für Browser + Vite
     "lib": [
