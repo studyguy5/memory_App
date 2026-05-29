@@ -1,7 +1,13 @@
 
 
 
-
+/**
+ * @function renderResultsTemplate we return the html code for the results
+ * @param themeImg the choosen theme
+ * @param player1Points point of player One
+ * @param player2Points points of player Two
+ * @returns html
+ */
 export function renderResultsTemplate(themeImg: string | null, player1Points: string | null, player2Points: string | null): string {
     return`<div class="results">
         ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/game_over.svg" alt="game over.svg">' : themeImg === 'gaming' ? '<img src="/project/assets/img/gameOver_red.svg" alt="game over.svg">' : themeImg === 'daproject' ? '<img src="/project/assets/img/gameOver_orange.svg" alt="game over.svg">' : ""}
@@ -22,30 +28,45 @@ export function renderResultsTemplate(themeImg: string | null, player1Points: st
     </div>`;
 }
 
+/**
+ * @function playerTwoWinsTemplate we return the html code for the case where player two wins
+ * @param themeImg the choosen theme
+ * @returns html
+ */
 export function playerTwoWinsTemplate(themeImg: string | null): string {
     return `<div class="resultsWinner">
             ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/Confetti.svg" alt="confetti.svg">' : ''}
         <span>The winner is</span>
-        <p class="blue">${'Blue player'}</p>
+        <p class="${themeImg === 'codeVibes' ? 'orange' : themeImg === 'gaming' ? 'blue' : themeImg === 'daproject' ? 'blue' : ""}">${themeImg === 'codeVibes' ? 'Orange player' : themeImg === 'gaming' ? 'Blue player' : themeImg === 'daproject' ? 'Blue player': ""}</p>
         <div class="imageButtonDiv">
-        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/blue_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': themeImg === 'daproject' ? '<img src="/project/assets/img/orange_PawnWhiteBorder.svg">' : ""}
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/orange_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': themeImg === 'daproject' ? '<img src="/project/assets/img/blue_PawnWhiteBorder.svg">' : ""}
         <button onclick="reloadpage()" class="playAgainBtn">${themeImg === 'codeVibes' ? 'Back to Start' : themeImg === 'gaming' ? 'Home' : 'Home'}</button>
         </div>
         </div>`;
 }
 
+/**
+ * @function playerOneWinsTemplate we return the html code for the case where player one wins
+ * @param themeImg choosen theme
+ * @returns html
+ */
 export function playerOneWinsTemplate(themeImg: string | null): string {
     return `<div class="resultsWinner">
         ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/Confetti.svg" alt="confetti.svg">' : ''}
         <span>The winner is</span>
-        <p class="orange">${'Orange player'}</p>
+        <p class="${themeImg === 'codeVibes' ? 'blue' : themeImg === 'gaming' ? 'orange' : themeImg === 'daproject' ? 'orange' : ""}">${themeImg === 'codeVibes' ? 'Blue player' : themeImg === 'gaming' ? 'Orange player' : themeImg === 'daproject' ? 'Orange player' : ''}</p>
         <div class="imageButtonDiv">
-        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/orange_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': themeImg === 'daproject' ? '<img src="/project/assets/img/orange_PawnWhiteBorder.svg">' : "" }
+        ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/blue_chess_pawn.svg">': themeImg === 'gaming' ? '<img src="/project/assets/img/golden_pokal.svg">': themeImg === 'daproject' ? '<img src="/project/assets/img/orange_PawnWhiteBorder.svg">' : "" }
         <button onclick="reloadpage()" class="playAgainBtn">${themeImg === 'codeVibes' ? 'Back to Start' : themeImg === 'gaming' ? 'Home' : 'Home'}</button>
         </div>
         </div>`;
 }
 
+/**
+ * @function itsADrawTemplate we return the html code for the case where its a draw
+ * @param themeImg choosen theme
+ * @returns html
+ */
 export function itsADrawTemplate(themeImg: string | null): string {
     return `<div class="resultsWinner">
     ${themeImg === 'codeVibes' ? '<img src="/project/assets/img/Confetti.svg" alt="confetti.svg">' : ''}

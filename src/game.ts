@@ -1,9 +1,26 @@
 
+
+/**
+ * @param renderGameUI - imported function to render the basic game User Interface
+ * @param navigateTOPage - imported function to navigate to the correct page
+ * @param checkForMatch - imported function to check if a player has opened a match
+ * @param cardsTemplate - imported function to render the cards
+ * @param globalPlayer - variable to store the current player is here defined
+ */
 import { renderGameUI } from "./renderGame";
 import { navigateTOPage } from "./main";
 import { checkForMatch } from "./gameLogic";
 import { cardsTemplate } from "./renderGame";
 let globalPlayer: string = '';
+
+/**
+ * @function generateGameUI this function generates the game User Interface
+ * @function hideWrapperDiv this function hides the wrapper setting div in order to show the game User Interface
+ * after that
+ * @function renderAndSetUpGameUI this function renders the game User Interface and sets up the event listeners
+ * for the cards exit option
+ * @returns void
+ */
 export function generateGameUI(): void {
     let wrapper = document.querySelector<HTMLDivElement>('.gameSettingsWrapper');
     globalPlayer = document.querySelector<HTMLDivElement>('.player')?.innerHTML.toUpperCase() || '';
@@ -18,11 +35,22 @@ export function generateGameUI(): void {
     };
 }
 
+/**
+ * @function hideWrapperDiv this function hides the wrapper setting div in order to make place for the game User Interface
+ * @param wrapper
+ * @returns void 
+ */
 function hideWrapperDiv(wrapper: HTMLDivElement) {
     wrapper.style.display = 'none';
     wrapper.style.opacity = '0';
 }
 
+/**
+ * @function renderAndSetUpGameUI this function renders the game User Interface and sets up the event listeners
+ * for the cards exit option
+ * @param game 
+ * @returns void
+ */
 function renderAndSetUpGameUI(game: HTMLDivElement) {
     game.innerHTML = renderGameUI();
         document.querySelector('.yes')?.addEventListener('click', reloadpage);
@@ -33,12 +61,19 @@ function renderAndSetUpGameUI(game: HTMLDivElement) {
         }, 300);
 }
 
+/**
+ * @function reloadpage this function reloads the page
+ */
 function reloadpage() {
     window.location.reload();
 }
 
-let col = 0;
 
+/**
+ * @function setThemeOnRoot this function sets the theme as chosen by the user in the game User Interface
+ * @param col this col variable is to decide which card set the User has chosen and set the columns accordingly
+ */
+let col = 0;
 
 export function setThemeOnRoot(): void {
     let themeImg: string | null = '';
@@ -51,44 +86,70 @@ export function setThemeOnRoot(): void {
     let rightPlayerImg = document.querySelector<HTMLImageElement>('.currentPlayerImg') as HTMLImageElement;
     let rightPlayer = document.querySelector<HTMLImageElement>('.currentPlayerImg img') as HTMLImageElement;
     setRightPlayerIconAndBackground(themeImg, choosenPlayer, rightPlayerImg, rightPlayer);
-
-
+    
+    
 }
 
+/**
+ * @function setRightPlayerIconAndBackground this function sets the right player icon and background in the middle of the game, top side
+ * @param themeImg 
+ * @param choosenPlayer 
+ * @param rightPlayerImg 
+ * @param rightPlayer 
+ */
 function setRightPlayerIconAndBackground(themeImg: string | null, choosenPlayer: string, rightPlayerImg: HTMLImageElement, rightPlayer: HTMLImageElement) {
     if (rightPlayer) {
         rightPlayer.src = `${themeImg === 'codeVibes' ? `/project/assets/icons/codeVibes_${choosenPlayer}.svg` :
-            themeImg === 'gaming' ? `/project/assets/icons/gaming_white.svg` : `/project/assets/icons/gaming_white.svg`}`;
+        themeImg === 'gaming' ? `/project/assets/icons/gaming_white.svg` : `/project/assets/icons/gaming_white.svg`}`;
     }
     if (themeImg === 'gaming' || themeImg === 'daproject') {
         rightPlayerImg.style.background = choosenPlayer === 'blue' ? "blue" : "orange";
     }
-    // let s = size.innerHTML;
-    // console.log(globalPlayer, s);
 }
 
+/**
+ * @function setGlobalPlayer this function sets the global player as value or parameter in order to use and change it in another file
+ * @param value 
+ * @returns globalPlayer
+ */
 export function setGlobalPlayer(value: string) {
     globalPlayer = value;
 }
+
+/**
+ * @param globalPlayer here we export the variable globalPlayer
+ * @param rightArray here we choose which card set the player wants, and select the right arraay to show the right data source for the cards
+ */
 export { globalPlayer };
 export let rightArray: string[] = [];
 
+/**
+ * @function getColumns this function returns the right amount of columns for the game0
+ * @param col 
+ * @returns 
+ */
 function getColumns(col: number): number {
     let theme = document.documentElement.getAttribute('data-theme');
     switch (col) {
         case col = 16:
             rightArray = cardThemes[theme + 'Theme'].card_16;
             return 4;
-        case col = 24:
+            case col = 24:
             rightArray = cardThemes[theme + 'Theme'].card_24;
             return 6;
-        case col = 36:
-            rightArray = cardThemes[theme + 'Theme'].card_36;
+            case col = 36:
+                rightArray = cardThemes[theme + 'Theme'].card_36;
             return 6;
-        default: return 4;
-    }
+            default: return 4;
+        }
 }
 import { state } from "./gameLogic";
+
+/**
+ * @function setListenerPlayer this function sets the event listener for the cards and opens a card after click
+ * by adding the is-filtered class
+ * @returns void
+ */
 function setListenerPlayer() {
     const fieldRef = document.querySelectorAll('.card') as NodeListOf<HTMLButtonElement>;
     if (fieldRef) {
@@ -106,7 +167,11 @@ function setListenerPlayer() {
 
 import { cardThemes } from "./cardSize";
 
-
+/**
+ * @function renderCards this function renders the cards in the game field
+ * checks which array it has to render, shuffles it and renders it
+ * @returns void
+ */
 function renderCards(): void {
     let themeImg = document.documentElement.getAttribute('data-theme');
     let field = document.querySelector<HTMLDivElement>('.gameField') as HTMLDivElement;
@@ -128,6 +193,11 @@ function renderCards(): void {
     }
 }
 
+/**
+ * @function shuffle this function shuffles the array and generates a ramdom order in the memory card game
+ * @param rightArray 
+ * @returns 
+ */
 function shuffle(rightArray: string[]): string[] {
     let currentIndex = rightArray.length;
     while (currentIndex != 0) { // While there remain elements to shuffle..
@@ -141,11 +211,11 @@ function shuffle(rightArray: string[]): string[] {
     return rightArray;
 }
 
-// Used like so
-let arr: number[] = [2, 11, 37, 42];
-// shuffle(arr);
-console.log(arr);
 
+/**
+ * @function activateExitWindow this function lets the exit window slide down if we click on exit
+ * @returns void
+ */
 function activateExitWindow() {
     let exitBtn = document.querySelector('.exitGame') as HTMLDivElement;
     let wrapper = document.querySelector('.exitPopupWrapper') as HTMLDivElement;
@@ -155,6 +225,13 @@ function activateExitWindow() {
     }
 }
 
+/**
+ * @function letExitWindowSlideDown this function lets the exit window slide down and changes the css
+ * @param exitBtn 
+ * @param exitWindow 
+ * @param wrapper 
+ * @returns void
+ */
 function letExitWindowSlideDown(exitBtn: HTMLDivElement, exitWindow: HTMLDivElement, wrapper: HTMLDivElement) {
     exitBtn.addEventListener('click', () => {
         wrapper.style.transition = '500ms ease-in-out';
@@ -166,6 +243,13 @@ function letExitWindowSlideDown(exitBtn: HTMLDivElement, exitWindow: HTMLDivElem
     });
 }
 
+/**
+ * @function handleClicks this function adds an event listener to the buttons in the exit window
+ * and triggers the back to game or exit function if we click
+ * @param exitWindow 
+ * @param wrapper 
+ * @returns void
+ */
 function handleClicks(exitWindow: HTMLDivElement, wrapper: HTMLDivElement) {
     let yesBtn = document.querySelector('.exitGamePopup .yes') as HTMLButtonElement;
     let noBtn = document.querySelector('.exitGamePopup .no') as HTMLButtonElement;

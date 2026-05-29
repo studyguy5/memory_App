@@ -1,4 +1,9 @@
 
+/**
+ * @function renderGameUI - function to render the basic game User Interface
+ * @param themeImg - variable to store the choosen theme
+ * @returns html
+ */
 export function renderGameUI() {
     let themeImg: string | null = '';
     themeImg = document.documentElement.getAttribute('data-theme');
@@ -44,6 +49,12 @@ export function renderGameUI() {
         
     }
 
+    /**
+     * @function cardsTemplate we return the html code for a single card
+     * @param themeImg choosen theme
+     * @param element element is a single card in the choosen card set
+     * @returns html
+     */
    export function cardsTemplate(themeImg: string | null, element: string) {
         return /*html*/ `
                 <button id="card" class="card">

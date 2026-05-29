@@ -1,13 +1,32 @@
+
+/**
+ * @param renderSettingsPage - function to render the settings page into the DOM
+ * @param generateGameUI - function to render the game UI into the DOM
+ * @param renderResultsUI - function to render the results  into the DOM
+ * 
+ */
 import './styles/main.scss';
 import { renderSettingsPage } from './renderSettings';
 import { generateGameUI} from './game';
 import { renderResultsUI } from "./result";
-import { player1Points, player2Points } from "./gameLogic";
-// document.getElementById('title')!.innerText = 'Hallo, ich benutze kein Module';
+
+/**
+ * @function addEventListener - function to add an event listener to the body element and get the current page
+ * this data attribut is used to navigate to the correct page
+ */
 document.addEventListener('DOMContentLoaded', () => {
     const currentPage = document.body.getAttribute('data-page') ?? 'start';
     navigateTOPage(currentPage);
 })
+
+/**
+ * @function navigateTOPage - function to navigate to the correct page by asking the current page and select according to the case
+ * @function generateSettingsPage - function to render the settings page into the DOM
+ * @function generateGameUI - function to render the game UI into the DOM
+ * @function rnderResultsUI - function to render the results  into the DOM
+ * @default generateSettingsPage this is the default case, if an Error occurs
+ * @param currentPage the variable to store the data attribut on the body tag
+ */
 export function navigateTOPage(currentPage: string): void {
     document.querySelector('body')!.setAttribute('data-page', currentPage);
     switch (currentPage) {
@@ -24,7 +43,13 @@ export function navigateTOPage(currentPage: string): void {
 
 
 
-
+/**
+ * @function generateSettingsPage - function to render the settings page into the DOM
+ * @function setLitenerTheme - function to add an event listener to the theme buttons
+ * @function setLitenerPlayer - function to add an event listener to the player buttons
+ * @function setLitenerSize - function to add an event listener to the size buttons
+ * @returns void
+ */
 function generateSettingsPage(): void {
     let setting = document.querySelector('.gameSettingsWrapper') as HTMLDivElement;
     setting.innerHTML = "";
@@ -35,18 +60,18 @@ function generateSettingsPage(): void {
 }
 
 
-function init2() {
-    const fieldRef = document.getElementById('card');
-    if (fieldRef) {
-        fieldRef.addEventListener('click', e => {
-            const card = (e.target as HTMLElement).closest('.card') as HTMLButtonElement;
-            if (card) {
-                card.classList.toggle('is-filtered');
-                console.log(card.classList);
-            }
-        })
-    }
-}
+// function init2() {
+//     const fieldRef = document.getElementById('card');
+//     if (fieldRef) {
+//         fieldRef.addEventListener('click', e => {
+//             const card = (e.target as HTMLElement).closest('.card') as HTMLButtonElement;
+//             if (card) {
+//                 card.classList.toggle('is-filtered');
+//                 console.log(card.classList);
+//             }
+//         })
+//     }
+// }
 
 // <section id="field">
 //         <button class="card">
@@ -58,6 +83,10 @@ function init2() {
 //     </section>
 
 
+/**
+ * @function addEventListener - function to add an event listener to the start button
+ * if pressed, it slides the start content out of the screen
+ */
 const button: HTMLButtonElement = document.querySelector('.startButton') as HTMLButtonElement;
 if (button) {
     button.addEventListener('click', (el) => {
@@ -73,11 +102,17 @@ if (button) {
     })
 }
 
+/**
+ * this sets the button to start the game disabled, until the theme, player and size are choosen
+ */
 const button2: HTMLButtonElement = document.querySelector('.startSession') as HTMLButtonElement;
 if (button2) {
     button2.disabled = true;
 }
 
+/**
+ * here we we wait a second and set the opacity of the layer to 1
+ */
 const layer: HTMLButtonElement = document.querySelector('.gameSettingsWrapper') as HTMLButtonElement;
 if (layer) {
     setTimeout(() => {
@@ -86,24 +121,27 @@ if (layer) {
 }
 
 
-let vibe = false;
-let playerColor = false;
-let size = false;
-
+/**
+ * @function setLitenerTheme - function to add an event listener to the theme buttons
+ * so the User is able to choose a theme
+ */
 function setLitenerTheme() {
     const items = document.querySelectorAll<HTMLElement>('.themes [data-theme]');
     const image = document.querySelectorAll<HTMLElement>('.themes img');
     items.forEach((item: HTMLElement) => {
         item.addEventListener('click', () => {
             items.forEach((i: HTMLElement) => i.classList.remove('active'),
-                image.forEach((i: HTMLElement) => i.style.display = "none"))
+            image.forEach((i: HTMLElement) => i.style.display = "none"))
             const themeValue: string = item.getAttribute('data-theme')!;
             chooseThemeSetting(themeValue);
         });
     });
 }
 
-
+/**
+ * @function chooseThemeSetting - function does show some additional css on each theme element
+ * @param theme the choosen theme
+ */
 function chooseThemeSetting(theme: string): void {
     if (theme === 'codeVibes') {
         chooseCodeVibes(theme);
@@ -116,6 +154,16 @@ function chooseThemeSetting(theme: string): void {
     }
 }
 
+let vibe = false;
+let playerColor = false;
+let size = false;
+
+/**
+ * @function chooseCodeVibes - function does show some additional css on this specific li element
+ * @function chooseGaming - function does show some additional css on this specific li element
+ * @function chooseDaproject - function does show some additional css on this specific li element
+ * @param theme choosen theme
+ */
 function chooseCodeVibes(theme:string): void {
     vibe = true;
         const yellow = document.querySelector<HTMLImageElement>(`.themes li[data-theme="${theme}"] img`) as HTMLImageElement;
@@ -146,6 +194,10 @@ function chooseDaproject(theme:string): void {
         bar2.innerHTML = `${theme}`;
 }
 
+/**
+ * @function setLitenerPlayer - function to add an event listener to the player buttons
+ * so the User is able to choose a player color
+ */
 function setLitenerPlayer() {
     const items = document.querySelectorAll<HTMLElement>('.choose [data-player]');
     const image = document.querySelectorAll<HTMLElement>('.choose img');
@@ -159,6 +211,11 @@ function setLitenerPlayer() {
     });
 }
 
+/**
+ * @function choosePlayerSetting - function decides which player color is choosen
+ * @param player player color
+ * @returns void
+ */
 function choosePlayerSetting(player: string): void {
     if (player === 'Blue') {
         chooseBlue(player);
@@ -168,6 +225,11 @@ function choosePlayerSetting(player: string): void {
     }
 }
 
+/**
+ * @function chooseBlue this function sets the css for the player blue
+ * @function chooseOrange this function sets the css for the player orange
+ * @returns void
+ */
 function chooseBlue(player:string): void {
     playerColor = true;
         const yellow = document.querySelector<HTMLImageElement>(`.choose li[data-player="${player}"] img`) as HTMLImageElement;
@@ -188,6 +250,11 @@ function chooseOrange(player:string): void {
         bar.innerHTML = `${player}`;
 }
 
+/**
+ * @function setLitenerSize - function to add an event listener to the size buttons
+ * so the User is able to choose a size
+ * @returns void
+ */
 function setLitenerSize() {
     const items = document.querySelectorAll<HTMLElement>('.size [data-amount]');
     const image = document.querySelectorAll<HTMLElement>('.size img');
@@ -201,6 +268,10 @@ function setLitenerSize() {
     });
 }
 
+/**
+ * @function chooseSizeSetting - function decides which carddeck is choosen
+ * @param amount the carddeck the User has choosen
+ */
 function chooseSizeSetting(amount: string): void {
     if (amount === '16') {
         choose16(amount);
@@ -213,6 +284,12 @@ function chooseSizeSetting(amount: string): void {
     }
 }
 
+/**
+ * @function choose16 - this function sets the css for the 16 card deck
+ * @function choose24 - this function sets the css for the 24 card deck
+ * @function choose36 - this function sets the css for the 36 card deck
+ * @param amount 
+ */
 function choose16(amount:string): void {
     size = true;
         const yellow = document.querySelector<HTMLImageElement>(`.size li[data-amount="${amount}"] img`) as HTMLImageElement;
@@ -243,6 +320,11 @@ function choose36(amount:string): void {
         bar.innerHTML = `${amount}`;
 }
 
+/**
+ * @function readyToPlayIntervall - function to check if the User is ready to play and has choosen all options
+ * only if true the start button will be enabled
+ * @returns void
+ */
 let readyToPlayIntervall = setInterval(() => {
     if (vibe && playerColor && size) {
         clearInterval(readyToPlayIntervall);

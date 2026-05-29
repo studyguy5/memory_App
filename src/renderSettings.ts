@@ -1,5 +1,9 @@
 
-
+/**
+ * 
+ * @returns the template Literal for the settings page to select options for the game
+ * @retuns html
+ */
 export function renderSettingsPage(){
     return /*html*/`
     <div class="gameSettingsContent">
